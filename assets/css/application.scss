@@ -1,12 +1,16 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
+// 1. Import the initial variables
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
+
 // Imports
 @import 'variables';
 
 // Bulma.io CSS Framework
-@import 'bulma';
-
+@import "bulma/bulma";
 
 // Font-Awesome
 @import 'font-awesome/font-awesome';

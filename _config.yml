@@ -1,23 +1,23 @@
-name: Jekyll Bulma
-description: "Jekyll Bulma Theme, Bulma.io CSS Framework Jekyll Template for Developers"
-baseurl: /jekyll-bulma
-url: http://erayaydin.github.io
-download: "https://github.com/erayaydin/jekyll-bulma/archive/master.zip"
+name: Global SWAI
+description: "Global Startup Weekend on Artificial Intelligence"
+baseurl: ""
+url: "https://gswai.github.io"
+download: ""
 social:
-  github: erayaydin
-  email: aydineray@mail.com
+  github: 
+  email: 
   facebook:
-  twitter: erayaydi
+  twitter: 
   instagram:
   tumblr:
 author:
-  name: Eray AYDIN
-  bio: "Senior PHP Developer and Linux System Administrator, Free Software Fan, Archy (On Way Trust User), Junior Game Developer"
-  email: aydineray@mail.com
-  image: /assets/images/author.jpg
-  github: erayaydin
-  facebook: erayaydi
-  twitter: erayaydi
+  name: 
+  bio: 
+  email: 
+  image: 
+  github: 
+  facebook: 
+  twitter: 
   instagram:
   tumblr:
   show_on_post: true

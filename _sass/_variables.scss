@@ -3,3 +3,14 @@
 //
 
 $body-bg: #000;
+
+$navbar-height: 5.25rem;
+$navbar-item-img-max-height: 4.75rem;
+
+.has-bg-img { background: url('/assets/images/GSWAI_canada.png')center center; 
+background-size:cover;  opacity: 0.2; filter: alpha(opacity=50); }
+
+$darkblue: #13123d;
+//19073e
+
+$primary: $darkblue;
