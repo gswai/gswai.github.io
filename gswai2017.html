@@ -1,0 +1,134 @@
+---
+layout: default
+leaflet: true
+map_leaflet: true
+
+---
+
+
+<section class="section">
+  <div class="container">
+    <h1 class="title has-text-centered">
+      GSWAI 2017
+    </h1>
+    <div id="mapid" style="height: 300px; width: 100%;"></div>
+    <br>
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Weekends</p>
+          <p class="title">2</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Cities</p>
+          <p class="title">10</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Mentors</p>
+          <p class="title">+30</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Participants</p>
+          <p class="title">+500</p>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p> It’s been already more than 6 months that the first Global Startup Weekend in the world dedicated to Artificial Intelligence took place in 11 cities around the world. In September 2017, during two weekends, one hundred web developers, graphic designers, business experts, engineers, researchers and students interested in the entrepreneurial experience worked intensively on functional startup prototypes. This global initiative is more than a simultaneous event in several places around the world: it is federating a genuine community around artificial intelligence, democratising its use, and making it more diverse, inclusive and impactful by removing boundaries.
+    </p>
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container" id="about">
+    <h3 class="title has-text-centered">
+      What they say...
+    </h3>
+    <div class="columns">
+    {% for tweet in site.data.tweets limit: 3 %}
+      <div class="column">
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <a href="{{ tweet.url }}">
+            <img src="/assets/images/tweets/{{ tweet.image_author }}">
+          </a>
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <a href="{{ tweet.url }}"><strong>{{ tweet.name }}</strong></a> <small>{{ tweet.screenname }}</small> <small>{{ tweet.date }}</small>
+            <br>
+            {{ tweet.text }}
+          </p>
+        </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            {% if tweet.retweets %}
+              {{ tweet.retweets }}
+              <a class="level-item">
+                <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+              </a>
+            {% endif %}
+            {% if tweet.likes %}
+              {{ tweet.likes }} 
+              <a class="level-item">
+                <span class="icon is-small"><i class="fas fa-heart"></i></span>
+              </a>
+            {% endif %}
+          </div>
+        </nav>
+      </div>
+    </article>
+  </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="is-large section-padding-large">
+  <div class="container">
+    <div class='carousel carousel-animated carousel-animate-slide'>
+      <div class='carousel-container'>
+
+
+        {% for photo in site.data.photos %}
+          <div class='carousel-item has-background is-active'>
+            <img class="is-background" src="/assets/images/photos/{{ photo.url }}" alt="" width="640" height="310" />
+            <div class="title">{{ photo.title }}</div>
+          </div>
+        {% endfor %}
+
+      </div>
+      <div class="carousel-navigation is-overlay">
+        <div class="carousel-nav-left">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </div>
+        <div class="carousel-nav-right">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

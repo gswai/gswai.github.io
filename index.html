@@ -351,33 +351,28 @@ layout: default
 <section class="section">
   <div class="container">
     <h1 class="title has-text-centered">
-      Talk about us
+      WHAT’S THE LATEST
     </h1>
-
     <div class="columns">
-
-
-
-
-      {% for post in site.posts limit: 3 %}
+      {% for post in site.data.articles limit: 3 %}
       <div class="column">
-
-
         <div class="card">
           <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="/assets/images/posts/{{ post.image }}" alt="Placeholder image">
+            <figure class="image is-4by2">
+              <a href="{{ post.medium_url }}">
+                <img src="/assets/images/posts/{{ post.image_post }}" alt="Placeholder image">
+              </a>
             </figure>
           </div>
           <div class="card-content">
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <img src="{{ post.author_url }}" alt="Placeholder image">
+                  <img src="/assets/images/posts/{{ post.image_author }}" alt="Placeholder image">
                 </figure>
               </div>
               <div class="media-content">
-                <p class="title is-4">{{ post.author }}</p>
+                <a class="title is-4" href="{{ post.medium_url }}">{{ post.author }}</a> <br>
                 <p class="subtitle is-6">{{ post.date | date: "%b %-d, %Y" }}</p>
               </div>
             </div>

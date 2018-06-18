@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="{{ "/assets/css/application.css" | prepend: site.baseurl }}" />
     <link rel="stylesheet" href="{{ "/assets/css/prism.css" | prepend: site.baseurl }}" />
 
-    <!--   <link rel="stylesheet" href="{{ "/assets/css/bulma.min.css" | 
-    prepend: site.baseurl }}" />
-    <script defer src="{{ "/assets/css/all.js" | prepend: site.baseurl }}"></script>
-    -->
+    {% if page.leaflet %}
+      <link rel="stylesheet" href="/assets/css/leaflet.css" />
+      <script src="/assets/js/leaflet.js"></script>
+    {% endif %}
 
 </head>
 <body class="has-navbar-fixed-top">
@@ -37,19 +37,18 @@
       <div id="navbarExampleTransparentExample" class="navbar-menu">
         <div class="navbar-start">
           <div class="navbar-item" href="#">
-            Global SWAI
+            <a href="/">Global SWAI</a>
+            
           </div>
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item is-link" href="#about">
-            <a href="#about">Get involved</a>
+            <a href="/#about">Get involved</a>
           </div>
 
           <div class="navbar-item" href="#">
-            <span>
-              GSWAI 2017
-            </span>
+            <a href="/gswai2017">GSWAI 2017</a>
           </div>
 
           <div class="navbar-item" href="#">
@@ -137,6 +136,15 @@
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 <script src="{{ site.baseurl }}{{ "/assets/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/prism.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/bulma-carousel.js" | prepend: site.baseurl }}"></script> 
+
+<script>
+var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
+</script>
+
+{% if page.map_leaflet %}
+<script src="/assets/js/map_leaflet.js" type="text/javascript"></script>
+{% endif %}
 <script>
     $('.nav-toggle').bind('click', function(){
         var menus = $(this).siblings(".nav-menu");
