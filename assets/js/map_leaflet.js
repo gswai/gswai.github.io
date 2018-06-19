@@ -32,7 +32,7 @@ L.marker([45.5016889, -73.56725599999999], {icon: canadaIcon}).addTo(mymap).bind
 L.marker([43.6108, 3.8767], {icon: franceIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br /> Paris, France');
 L.marker([7.369721999999999, 12.354722000000038], {icon: cameroonIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Douala, Cameroon');
 L.marker([-9.189967, -75.015152], {icon: peruIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Lima, Peru');
-L.marker([35.86166, 104.195397], {icon: chinaIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Hong Kong, China');
+L.marker([22.28552, 114.15769], {icon: chinaIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Hong Kong, China');
 L.marker([19.4326077, -99.13320799999997], {icon: mexicoIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Mexico city, Mexico');
 L.marker([20.6596988, -103.34960920000003], {icon: mexicoIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Guadalajara, Mexico');
 L.marker([33.854721, 35.86228499999993], {icon: lebanonIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Beirut, Lebanon');

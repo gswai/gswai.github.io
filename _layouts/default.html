@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <link rel="icon" href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
@@ -17,15 +17,17 @@
       <link rel="stylesheet" href="/assets/css/leaflet.css" />
       <script src="/assets/js/leaflet.js"></script>
     {% endif %}
-
+    {% seo %}
 </head>
 <body class="has-navbar-fixed-top">
   <div class="container">
 
-    <nav class="navbar is-transparent is-fixed-top is-primary">
+    <nav class="navbar is-fixed-top is-primary">
       <div class="navbar-brand">
         <div class="navbar-item" href="https://bulma.io">
-          <img src="/assets/images/logo_small.svg" alt="GSWAI" width="100" height="200">
+          <a href="/">
+            <img src="/assets/images/logo_small.svg" alt="GSWAI" width="100" height="200">
+          </a>
         </div>
         <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
           <span></span>
@@ -38,7 +40,6 @@
         <div class="navbar-start">
           <div class="navbar-item" href="#">
             <a href="/">Global SWAI</a>
-            
           </div>
         </div>
 
@@ -52,10 +53,9 @@
           </div>
 
           <div class="navbar-item" href="#">
-                <span>
-                  Team
-                </span>
+            <a href="/medium_posts">Communications</a>
           </div>
+          <hr class="navbar-divider">
 
           <div class="navbar-item">
             <div class="field is-grouped">

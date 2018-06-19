@@ -1,26 +1,31 @@
-name: Global SWAI
-description: "Global Startup Weekend on Artificial Intelligence"
+title: Global Startup Weekend on Artificial Intelligence
+description: "GSWAI help communities educate on AI, democratize it and push them out of their comfort zone to build the better tomorrow in 54 hours"
 baseurl: ""
 url: "https://gswai.github.io"
 download: ""
 social:
-  github: 
-  email: 
-  facebook:
-  twitter: 
-  instagram:
-  tumblr:
+  name: Global SWAI
+  links:
+    - https://twitter.com/GlobalSWAI
+    - https://www.facebook.com/GlobalSWAI
+    - https://www.linkedin.com/company/globalswai
+    - https://github.com/gswai
+    - https://www.instagram.com/global_swai
 author:
-  name: 
-  bio: 
-  email: 
-  image: 
-  github: 
-  facebook: 
-  twitter: 
-  instagram:
-  tumblr:
+  name: Global SWAI 
+  image: /assets/logo_small.png
+  github: https://github.com/gswai
+  facebook: https://www.facebook.com/GlobalSWAI
+  twitter: https://twitter.com/GlobalSWAI
+  instagram: https://www.instagram.com/global_swai
   show_on_post: true
+twitter:
+  username: GlobalSWAI 
+  card: summary
+logo: /assets/logo_small.png
+lang: en_US
+
+
 permalink: /:categories/:title/
 sass:
   style: compressed
@@ -32,6 +37,9 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-gist
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 exclude:
   - Gemfile
