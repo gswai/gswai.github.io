@@ -28,7 +28,7 @@ layout: default
 </section>
 
 <section class="section">
-  <div class="container" id="about">
+  <div class="container" >
     <div class="notification has-text-centered">
       <video width="70%" height="auto" controls><source 
         src="/assets/videos/SWAIMontreal.mp4" type="video/mp4"></video><br>
@@ -44,10 +44,10 @@ layout: default
 </section>
 
 <section class="hero is-small is-primary">
-  <div class="hero-body">
+  <div class="hero-body" id="about">
     <div class="container">
-      <h1 class="title has-text-centered">
-        Get involved
+      <h1 class="title has-text-centered" >
+         Get involved
       </h1>
 
       <h2 class="subtitle has-text-centered">
@@ -84,7 +84,7 @@ layout: default
           <div class="content">
             Want to help support startups locally, regionally or globally? <br>
             <p class="has-text-centered">
-              <a class="button is-link" href="mailto:globalswai@gmail.com">Let's talk</a>
+              <a class="button is-link" href="mailto:{{ site.author.email }}">Let's talk</a>
             </p>
           </div>
         </div>

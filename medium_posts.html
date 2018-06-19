@@ -12,7 +12,7 @@ layout: default
 
 
       <div class="columns is-multiline">
-        {% for post in site.data.articles %}
+        {% for post in site.data.articles limit:4 %}
         <div class="column">
           <div class="card">
             <div class="card-image">

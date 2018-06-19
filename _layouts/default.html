@@ -93,45 +93,66 @@
 
 {{ content }}
 <footer class="footer">
-    <div class="container">
-        <div class="content has-text-centered">
-            <p>
-              2018 - Global Startup Weekend Team
-            </p>
-            <p>
-                {% if site.social.github %}
-                <a class="icon" href="https://github.com/{{ site.social.github }}">
-                    <i class="fa fa-github"></i>
-                </a>
-                {% endif %}
-                {% if site.social.email %}
-                <a class="icon" href="mailto:{{ site.social.email }}">
-                    <i class="fa fa-envelope-o"></i>
-                </a>
-                {% endif %}
-                {% if site.social.facebook %}
-                <a class="icon" href="https://facebook.com/{{ site.social.facebook }}">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                {% endif %}
-                {% if site.social.twitter %}
-                <a class="icon" href="https://twitter.com/{{ site.social.twitter }}">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                {% endif %}
-                {% if site.social.instagram %}
-                <a class="icon" href="https://instagram.com/{{ site.social.instagram }}">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                {% endif %}
-                {% if site.social.tumblr %}
-                <a class="icon" href="https://{{ site.social.tumblr }}.tumblr.com">
-                    <i class="fa fa-tumblr"></i>
-                </a>
-                {% endif %}
-            </p>
+  <div class="container">
+    <div class="content has-text-centered">
+
+
+      <div class="columns">
+        <div class="column">
+          <p class="menu-label has-text-centered">
+            <a href="/">Global SWAI</a>
+          </p>
+          <ul class="menu-list no-bullets">
+            <a href="/#about">Get involved</a>
+            <a href="/gswai2017">GSWAI 2017</a>
+            <a href="/medium_posts">Communications</a>
+          </ul>
         </div>
+        <div class="column">
+          <p class="menu-label">
+            Find us!
+          </p>
+          {% if site.author.github %}
+            <a class="icon" href="{{ site.author.github }}">
+              <i class="fa fa-github"></i>
+            </a>
+          {% endif %}
+          {% if site.author.email %}
+          <a class="icon" href="mailto:{{ site.author.email }}">
+            <i class="fa fa-envelope-o"></i>
+          </a>
+          {% endif %}
+          {% if site.author.facebook %}
+          <a class="icon" href="{{ site.author.facebook }}">
+            <i class="fa fa-facebook"></i>
+          </a>
+          {% endif %}
+          {% if site.author.twitter %}
+          <a class="icon" href="{{ site.author.twitter }}">
+            <i class="fa fa-twitter"></i>
+          </a>
+          {% endif %}
+          {% if site.author.instagram %}
+          <a class="icon" href="{{ site.author.instagram }}">
+            <i class="fa fa-instagram"></i>
+          </a>
+          {% endif %}
+          {% if site.author.tumblr %}
+          <a class="icon" href="https://{{ site.author.tumblr }}.tumblr.com">
+            <i class="fa fa-tumblr"></i>
+          </a>
+          {% endif %}
+
+        </div>
+      </div>
+
+      <p>
+        2018 - Global Startup Weekend Team
+      </p>
+      <p>
+      </p>
     </div>
+  </div>
 </footer>
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 <script src="{{ site.baseurl }}{{ "/assets/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
