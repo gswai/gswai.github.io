@@ -18,6 +18,9 @@
       <script src="/assets/js/leaflet.js"></script>
     {% endif %}
     {% seo %}
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+      {% include analytics.html %}
+    {% endif %}
 </head>
 <body class="has-navbar-fixed-top">
   <div class="container">

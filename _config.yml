@@ -25,7 +25,8 @@ twitter:
   card: summary
 logo: /assets/logo_small.png
 lang: en_US
-
+google_analytics: UA-121112808-1
+google_site_verification: kf1slUKwLAkQ-vRpG27Je3Gy4FY3NC1dRvt_1Dj70zg
 
 permalink: /:categories/:title/
 sass:
