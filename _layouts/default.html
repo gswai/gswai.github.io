@@ -97,12 +97,12 @@
 {{ content }}
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <div class="content">
 
 
       <div class="columns">
         <div class="column">
-          <p class="menu-label has-text-centered">
+          <p class="menu-label">
             <a href="/">Global SWAI</a>
           </p>
           <ul class="menu-list no-bullets">
@@ -122,7 +122,7 @@
           {% endif %}
           {% if site.author.email %}
           <a class="icon" href="mailto:{{ site.author.email }}">
-            <i class="fab fa-envelope-open"></i>
+            <i class="fas fa-envelope-open"></i>
           </a>
           {% endif %}
           {% if site.author.facebook %}
@@ -149,9 +149,11 @@
         </div>
       </div>
 
-      <p>
-        2018 - Global Startup Weekend Team
-      </p>
+      <div class="has-text-centered">
+        <p>
+          2018 - Global Startup Weekend Team
+        </p>
+      </div>
       <p>
       </p>
     </div>
