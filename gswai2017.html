@@ -189,14 +189,14 @@ map_leaflet: true
 
 <section class="is-large section-padding-large">
   <div class="container">
-    <div class='carousel carousel-animated carousel-animate-slide' data-size="4">
+    <div class='carousel carousel-animated carousel-animate-slide' data-size="2">
       <div class='carousel-container'>
 
 
         {% for photo in site.data.photos %}
           <div class='carousel-item has-background is-active'>
             <img class="is-background" src="/assets/images/photos/{{ photo.url }}" alt="" width="640" height="310" />
-            <div class="title">{{ photo.title }}</div>
+            <div class="title">{{ photo.title | truncate: 80 }}</div>
           </div>
         {% endfor %}
 
