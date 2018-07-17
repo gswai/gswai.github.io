@@ -28,6 +28,10 @@ lang: en_US
 google_analytics: UA-121112808-1
 google_site_verification: kf1slUKwLAkQ-vRpG27Je3Gy4FY3NC1dRvt_1Dj70zg
 
+# Color the browser elements #
+color-browser: "#13123d"
+apple-status-bar-style: "black"
+
 permalink: /:categories/:title/
 sass:
   style: compressed
