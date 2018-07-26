@@ -54,9 +54,18 @@
           GSWAI 2017
         </a>
 
-        <a class="navbar-item" href="/medium_posts">
+        <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="/medium_posts">
           Communications
         </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="/medium_posts#videos">
+            <i class="fab fa-youtube"></i>  Videos
+          </a>
+          <a class="navbar-item" href="/medium_posts#articles">
+            <i class="fab fa-medium"></i>  Articles
+          </a>
+        </div>
         <hr class="navbar-divider">
 
         <div class="navbar-item">
@@ -97,14 +106,21 @@
 
       <div class="columns">
         <div class="column">
+          <aside class="menu">
           <p class="menu-label">
             <a href="/">Global SWAI</a>
           </p>
           <ul class="menu-list no-bullets">
-            <a href="/#about">Get involved</a>
-            <a href="/gswai2017">GSWAI 2017</a>
-            <a href="/medium_posts">Communications</a>
+            <li><a href="/#about">Get involved</a></li>
+            <li><a href="/gswai2017">GSWAI 2017</a></li>
+            <li><a href="/medium_posts">Communications</a>
+              <ul>
+                <li><a href="/medium_posts#videos"><i class="fab fa-youtube"></i> Videos</a></li>
+                <li><a href="/medium_posts#articles"><i class="fab fa-medium"></i> Articles</a></li>
+              </ul>
+            </li>
           </ul>
+          </aside>
         </div>
         <div class="column">
           <p class="menu-label">
@@ -114,11 +130,6 @@
             <a class="icon" href="{{ site.author.github }}">
               <i class="fab fa-github"></i>
             </a>
-          {% endif %}
-          {% if site.author.email %}
-          <a class="icon" href="mailto:{{ site.author.email }}">
-            <i class="fas fa-envelope-open"></i>
-          </a>
           {% endif %}
           {% if site.author.facebook %}
           <a class="icon" href="{{ site.author.facebook }}">
@@ -133,6 +144,16 @@
           {% if site.author.instagram %}
           <a class="icon" href="{{ site.author.instagram }}">
             <i class="fab fa-instagram"></i>
+          </a>
+          {% endif %}
+          {% if site.author.medium %}
+          <a class="icon" href="{{ site.author.medium }}">
+            <i class="fab fa-medium"></i>
+          </a>
+          {% endif %}
+          {% if site.author.email %}
+          <a class="icon" href="mailto:{{ site.author.email }}">
+            <i class="fas fa-envelope-open"></i>
           </a>
           {% endif %}
           {% if site.author.tumblr %}

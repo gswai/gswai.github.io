@@ -9,6 +9,7 @@ map_leaflet_landing: true
 
     <div class="container">
       <div id="mapid_landing" style="height: 300px; width: 100%;"></div>
+      <br>
       <!--
       <div class='card-content is-flex is-horizontal-center'>
         <figure class="image">
@@ -187,8 +188,8 @@ map_leaflet_landing: true
         <a href="/medium_posts"</a>WHAT’S THE LATEST
       </h1>
       <div class="columns">
-        {% for post in site.data.articles limit:3 offset:1 %}
-        <div class="column">
+        {% for post in site.data.articles limit:2 offset:1 %}
+        <div class="column is-one-third">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by2">
@@ -218,6 +219,11 @@ map_leaflet_landing: true
           </div>
         </div>
         {% endfor %}
+        <div class="column is-one-third">
+          <iframe width="100%" height="315" 
+            src="https://www.youtube.com/embed/GvzNlcIJz1Y" frameborder="0" 
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
