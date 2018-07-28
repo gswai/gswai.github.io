@@ -20,7 +20,7 @@ var LeafIcon = L.Icon.extend({
 var gswaiIcon = new LeafIcon({iconUrl: '/assets/flags/gswai.svg'})
 
 L.marker([43.6108, 3.8767], {icon: gswaiIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br /> Paris, France');
-L.marker([7.369721999999999, 12.354722000000038], {icon: gswaiIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Douala, Cameroon');
+L.marker([7.369721999999999, 12.354722000000038], {icon: gswaiIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Douala, Cameroon').openPopup();
 L.marker([-9.189967, -75.015152], {icon: gswaiIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Lima, Peru');
 L.marker([22.28552, 114.15769], {icon: gswaiIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Hong Kong, China');
 L.marker([19.4326077, -99.13320799999997], {icon: gswaiIcon}).addTo(mymap).bindPopup('<b>Startup Weekend AI</b><br />Mexico city, Mexico');
