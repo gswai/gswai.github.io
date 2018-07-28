@@ -2,6 +2,7 @@
 layout: default
 leaflet: true
 map_leaflet_landing: true
+bulma_accordion: true
 
 ---
 <section class="hero is-primary is-small">
@@ -59,9 +60,11 @@ map_leaflet_landing: true
 
 </section>
 
+
 <section class="hero is-small is-primary">
   <div class="hero-body" id="about">
     <div class="container">
+
       <h1 class="title has-text-centered" >
          Get involved
       </h1>
@@ -76,10 +79,21 @@ map_leaflet_landing: true
               <img src="/assets/images/getinvolved/organize.svg" alt="partner">
             </figure>
           </div>
-          <div class="content">
-            On the weekends of November 30- December 2 or December 7-9, organize 
-            a Startup Weekend Artificial Intelligence in your community !
-          </div>
+
+
+          <section class="accordions">
+            <article class="accordion">
+              <div class="accordion-header toggle">
+                <p>Organize a Startup Weekend AI (#SWAI)</p>
+                <button class="toggle" aria-label="toggle"></button>
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  On the weekends of Global Startup Weekend AI end of 2018, organize a Startup Weekend Artificial Intelligence in your community!  Startup Weekend is a 54-hour event designed to provide superior experiential education for technical and non-technical entrepreneurs, students and everybody interested in the entrepreneurial experience. The weekend event is centered on action, innovation, and education.  Beginning on Friday night with an idea pitching session and continuing throughout the weekend with testing, business model development, and basic prototype creation, Startup Weekend culminates on Sunday night with demo pitching in front of a panel of potential investors and local entrepreneurs.  Participants are challenged with building functional startups during the event and are able to collaborate with like-minded individuals outside of their
+                </div>
+              </div>
+            </article>
+          </section>
         </div>
         <div class="column">
           <div class='card-content is-flex is-horizontal-center'>

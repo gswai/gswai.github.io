@@ -180,12 +180,16 @@
 <script src="{{ "/assets/js/prism.js" | prepend: site.baseurl }}"></script>
 {% if page.bulma_carousel %}
 <script src="{{ "/assets/js/bulma-carousel.min.js" | prepend: site.baseurl }}"></script>
-{% endif %}
-
 <script>
 var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
 </script>
-
+{% endif %}
+{% if page.bulma_accordion %}
+<script type="text/javascript" src="{{ "/assets/js/bulma-accordion.min.js" | prepend: site.baseurl }}"></script>
+<script>
+var accordions = bulmaAccordion.attach(); // accordions now contains an array of all Accordion instances
+</script>
+{% endif %}
 {% if page.map_leaflet %}
 <script src="/assets/js/map_leaflet.js" type="text/javascript"></script>
 {% endif %}
