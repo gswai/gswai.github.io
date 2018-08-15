@@ -11,7 +11,6 @@
 
 
     <link rel="stylesheet" href="{{ "/assets/css/application.css" | prepend: site.baseurl }}" />
-    <link rel="stylesheet" href="{{ "/assets/css/prism.css" | prepend: site.baseurl }}" />
 
     {% if page.leaflet %}
       <link rel="stylesheet" href="/assets/css/leaflet.css" />
@@ -184,7 +183,6 @@
 </footer>
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 <script src="{{ site.baseurl }}{{ "/assets/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/assets/js/prism.js" | prepend: site.baseurl }}"></script>
 {% if page.bulma_carousel %}
 <script src="{{ "/assets/js/bulma-carousel.min.js" | prepend: site.baseurl }}"></script>
 <script>
@@ -212,14 +210,6 @@ var accordions = bulmaAccordion.attach(); // accordions now contains an array of
             menus.addClass('is-active');
         }
     });
-</script>
-<script>
-  (function() {
-    var d = document, s = d.createElement('script');
-    s.src = '//aydineray.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
 </script>
 </body>
 </html>
