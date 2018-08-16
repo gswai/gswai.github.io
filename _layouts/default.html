@@ -14,7 +14,6 @@
 
     {% if page.leaflet %}
       <link rel="stylesheet" href="/assets/css/leaflet.css" />
-      <script src="/assets/js/leaflet.js"></script>
     {% endif %}
     {% include color-browser.html %}
     {% seo %}
@@ -181,7 +180,8 @@
     </div>
   </div>
 </footer>
-<script src="{{ "/assets/js/navburger_click.js" | prepend: site.baseurl }}"></script>
+{% if page.leaflet %} <script src="/assets/js/leaflet.js"></script> {% endif %}
+<script type="text/javascript">{% include navburger_click.min.js  %}</script>
 {% if page.bulma_carousel %}
 <script src="{{ "/assets/js/bulma-carousel.min.js" | prepend: site.baseurl }}"></script>
 <script>
