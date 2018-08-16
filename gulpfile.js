@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
   gp_concat = require('gulp-concat'),
   gp_rename = require('gulp-rename'),
+  image = require('gulp-image'),
   gp_uglify = require('gulp-uglify');
 
 gulp.task('navburger', function(){
@@ -31,4 +32,21 @@ gulp.task('defer_css_loading', function () {
     .pipe(gulp.dest('./_includes/'));
 });
 
-gulp.task('default', ['navburger', 'map_leaflet_landing', 'map_leaflet', 'defer_css_loading'], function(){});
+gulp.task('image', function () {
+  gulp.src('./assets/images/*')
+    .pipe(image({
+      pngquant: true,
+      optipng: false,
+      zopflipng: true,
+      jpegRecompress: false,
+      mozjpeg: true,
+      guetzli: false,
+      gifsicle: true,
+      svgo: true,
+      concurrent: 10,
+      quiet: true // defaults to false
+    }))
+    .pipe(gulp.dest('./assets/images/'));
+});
+
+gulp.task('default', ['navburger', 'map_leaflet_landing', 'map_leaflet', 'defer_css_loading', 'image'], function(){});
