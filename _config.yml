@@ -48,6 +48,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+include:
+  - _pages
+
 exclude:
   - Gemfile
   - Gemfile.lock
