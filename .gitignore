@@ -129,4 +129,6 @@ modules.xml
 # .idea/misc.xml
 # *.ipr
 
+node_modules
+
 # End of https://www.gitignore.io/api/sass,linux,jekyll,ruby,webstorm
