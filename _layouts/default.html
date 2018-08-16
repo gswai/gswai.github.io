@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <link rel="icon" href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}">
+    <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml" />
 
@@ -15,13 +15,6 @@
     {% endcapture %}
     {{ include_to_scssify | scssify }}
     </style>
-
-    <!--
-    <link rel="stylesheet" href="{{ "/assets/css/application.css" | prepend: site.baseurl }}" />
-    {% if page.leaflet %}
-      <link rel="stylesheet" href="/assets/css/leaflet.css" />
-    {% endif %}
-    -->
 
     {% include color-browser.html %}
     {% seo %}
@@ -71,10 +64,10 @@
             Media
           </a>
           <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item" href="/videos">
+            <a class="navbar-item bd-tw-button button" href="/videos">
               <i class="fab fa-youtube"></i>   Videos
             </a>
-            <a class="navbar-item" href="/articles">
+            <a class="navbar-item bd-tw-button button" href="/articles">
               <i class="fab fa-medium"></i>   Articles
             </a>
           </div>
@@ -86,20 +79,13 @@
             Find us
           </a>
           <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item bd-tw-button button" 
-               data-social-network="Twitter" data-social-action="tweet" 
-                                             data-social-target="{{ 
-                                             site.author.twitter }}" 
-                                             target="_blank" href="{{ 
-                                             site.author.twitter }}">
+            <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
               <i class="fab fa-twitter"></i>&nbsp;Twitter
             </a>
-            <a class="navbar-item bd-tw-button button" href="{{ 
-              site.author.facebook }}">
+            <a class="navbar-item bd-tw-button button" href="{{ site.author.facebook }}">
               <i class="fab fa-facebook"></i>&nbsp;Facebook
             </a>
-            <a class="navbar-item bd-tw-button button" href="{{ 
-              site.author.instagram }}">
+            <a class="navbar-item bd-tw-button button" href="{{ site.author.instagram }}">
               <i class="fab fa-instagram"></i>&nbsp;Instagram
             </a>
           </div>
@@ -124,10 +110,10 @@
             <li><a href="/#about">Get involved</a></li>
             <li><a href="/gswai2017">GSWAI 2017</a></li>
             <li><a href="/team">Team</a>
-            <li><a href="/medium_posts">Communications</a>
+            <li><a href="/medium_posts">Media</a>
               <ul>
-                <li><a href="/medium_posts#videos"><i class="fab fa-youtube"></i> Videos</a></li>
-                <li><a href="/medium_posts#articles"><i class="fab fa-medium"></i> Articles</a></li>
+                <li><a href="/videos"><i class="fab fa-youtube"></i> Videos</a></li>
+                <li><a href="/articles"><i class="fab fa-medium"></i> Articles</a></li>
               </ul>
             </li>
           </ul>
