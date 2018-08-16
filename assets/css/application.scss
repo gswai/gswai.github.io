@@ -3,15 +3,15 @@
 ---
 
 //// 1. Import the initial variables
-//@import "bulma/sass/utilities/initial-variables";
-//@import "bulma/sass/utilities/functions";
-//
-//// Imports
-//@import 'variables';
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
+
+// Imports
+@import 'variables';
 //
 //// Bulma.io CSS Framework
 ////@import "bulma/bulma";
-//@import "bulma/sass/utilities/all";
+@import "bulma/sass/utilities/all";
 //@import "bulma/sass/base/all";
 //@import "bulma/sass/components/card";
 //@import "bulma/sass/components/dropdown";
@@ -28,16 +28,16 @@
 //@import "bulma/sass/elements/notification";
 //@import "bulma/sass/elements/tag";
 //@import "bulma/sass/elements/title";
-//@import "bulma/sass/grid/columns";
-//@import "bulma/sass/grid/tiles";
+@import "bulma/sass/grid/columns";
+@import "bulma/sass/grid/tiles";
 //@import "bulma/sass/layout/footer";
 //@import "bulma/sass/layout/hero";
 //@import "bulma/sass/layout/section";
 //@import "bulma/sass/utilities/controls";
-//
-//// Bulma plugins
-//@import "bulma-carousel/src/sass/index";
-//@import "bulma-accordion/src/sass/index";
+
+// Bulma plugins
+@import "bulma-carousel/src/sass/index";
+@import "bulma-accordion/src/sass/index";
 
 
 // Font-Awesome
@@ -58,3 +58,4 @@
     margin-bottom: 5px;
   }
 }
+
