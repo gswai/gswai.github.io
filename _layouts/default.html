@@ -9,8 +9,16 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml" />
 
+    <style>
+    {% capture include_to_scssify %}
+    {% include main.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+    </style>
 
+    <!--
     <link rel="stylesheet" href="{{ "/assets/css/application.css" | prepend: site.baseurl }}" />
+    -->
 
     {% if page.leaflet %}
       <link rel="stylesheet" href="/assets/css/leaflet.css" />
@@ -200,5 +208,21 @@ var accordions = bulmaAccordion.attach(); // accordions now contains an array of
 {% if page.map_leaflet_landing %}
 <script type="text/javascript">{% include map_leaflet_landing.min.js  %}</script>
 {% endif %}
+<noscript id="deferred-styles">
+  <link rel="stylesheet" type="text/css" href="/assets/css/application.css"/>
+</noscript>
+<script>
+  var loadDeferredStyles = function() {
+    var addStylesNode = document.getElementById("deferred-styles");
+    var replacement = document.createElement("div");
+    replacement.innerHTML = addStylesNode.textContent;
+    document.body.appendChild(replacement)
+    addStylesNode.parentElement.removeChild(addStylesNode);
+  };
+  var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+  else window.addEventListener('load', loadDeferredStyles);
+</script>
 </body>
 </html>
