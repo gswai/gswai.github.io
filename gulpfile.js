@@ -49,4 +49,4 @@ gulp.task('image', function () {
     .pipe(gulp.dest('./assets/images/'));
 });
 
-gulp.task('default', ['navburger', 'map_leaflet_landing', 'map_leaflet', 'defer_css_loading', 'image'], function(){});
+gulp.task('default', ['navburger', 'map_leaflet_landing', 'map_leaflet', 'defer_css_loading'], function(){});
