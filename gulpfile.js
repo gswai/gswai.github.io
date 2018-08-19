@@ -2,7 +2,10 @@ var gulp = require('gulp'),
   gp_concat = require('gulp-concat'),
   gp_rename = require('gulp-rename'),
   image = require('gulp-image'),
+  psi = require('psi'),
   gp_uglify = require('gulp-uglify');
+
+var site = 'https://d40e46fc.ngrok.io';
 
 gulp.task('navburger', function(){
   return gulp.src(['./assets/js/navburger_click.js'])
@@ -49,4 +52,26 @@ gulp.task('image', function () {
     .pipe(gulp.dest('./assets/images/'));
 });
 
-gulp.task('default', ['navburger', 'map_leaflet_landing', 'map_leaflet', 'defer_css_loading', 'image'], function(){});
+gulp.task('mobile', function () {
+    return psi(site, {
+        // key: key
+        nokey: 'true',
+        strategy: 'mobile',
+    }).then(function (data) {
+        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
+        console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
+        console.log(data.pageStats);
+    });
+});
+
+gulp.task('desktop', function () {
+    return psi(site, {
+        nokey: 'true',
+        // key: key,
+        strategy: 'desktop',
+    }).then(function (data) {
+        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
+    });
+});
+
+gulp.task('default', ['navburger', 'map_leaflet_landing', 'map_leaflet', 'defer_css_loading', 'mobile'], function(){});
