@@ -1,20 +1,69 @@
-<!DOCTYPE html>
-<html  lang="en">
+<!doctype html>
+<html amp lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml" />
 
-    <style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+
+    <style amp-custom>
     {% capture include_to_scssify %}
     {% include main.scss %}
     {% endcapture %}
     {{ include_to_scssify | scssify }}
     </style>
+
+    <!--
+    <style amp-custom>
+      .home-button {
+        margin-top: 8px;
+      }
+      .headerbar {
+        height: 50px;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .site-name {
+        flex: 1;
+        margin-left: -36px;
+      }
+      article {
+        margin-top: 50px;
+      }
+      .hamburger {
+        padding-left: 10px;
+      }      
+      .sidebar {
+        padding: 10px;
+        margin: 0;
+      }
+      .sidebar > li {
+        list-style: none;
+        margin-bottom:10px;
+      }
+      .sidebar a {
+        text-decoration: none;
+      }
+      .close-sidebar {
+        font-size: 1.5em;
+        padding-left: 5px;
+      }
+    </style>
+    -->
 
     {% include color-browser.html %}
     {% seo %}
@@ -22,77 +71,85 @@
       {% include analytics.html %}
     {% endif %}
 </head>
-<body class="has-navbar-fixed-top">
-  <nav class="navbar is-fixed-top is-primary">
-    <div class="navbar-brand">
-      <div class="navbar-item" href="https://bulma.io">
-        <a href="/">
-          <img src="/assets/images/logo_small.svg" alt="GSWAI" width="100" height="200">
-        </a>
+<body>
+
+
+  <header class="site-header">
+    <amp-img class="amp-sidebar-image"
+      src="/assets/images/favicon.png"
+      width="32"
+      height="32"
+      alt="an image"></amp-img>
+    <a class="site-title" href="{{ site.baseurl }}/">Global SWAI</a>
+    <nav class="site-nav">
+      <button on='tap:sidebar.toggle' class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </button>
+      <div class="trigger">
+        <span><a href="{{ site.baseurl | append: '/gswai2017'}}">GSWAI 2017</a></span>
+        <span><a href="{{ site.baseurl | append: '/articles'}}">Articles</a></span>
+        <span><a href="{{ site.baseurl | append: '/videos'}}">Videos</a></span>
       </div>
-      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+    </nav>
+  </header>
 
-    <div id="navbarExampleTransparentExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/">
-          Global SWAI
-        </a>
-      </div>
+  <amp-sidebar id="sidebar"
+    layout="nodisplay"
+    side="right">
+    <amp-img class="amp-close-image"
+      src="/assets/images/close.png"
+      width="20"
+      height="20"
+      alt="close sidebar"
+      on="tap:sidebar.close"
+      role="button"
+      tabindex="0"></amp-img>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li> <a href="/#about" target="_blank">Get involved</a>
+      </li>
+      <li>
+        <a href="/gswai2017" target="_blank">GSWAI 2017</a>
+      </li>
+      <li>
+        <a href="/videos" target="_blank">Videos</a>
+      </li>
+      <li> <a href="/articles" target="_blank">Articles</a>
+        <amp-img class="amp-sidebar-image"
+          src="/assets/images/favicon.png"
+          width="20"
+          height="20"
+          alt="an image"></amp-img>
+      </li>
+    </ul>
+  </amp-sidebar>
 
-      <div class="navbar-end">
-        <a class="navbar-item is-link" href="/#about">
-          Get involved
-        </a>
 
-        <a class="navbar-item" href="/gswai2017">
-          GSWAI 2017
-        </a>
 
-        <!--
-        <a class="navbar-item" href="/team">
-          Team
-        </a>
-        -->
+<!--
 
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            Media
-          </a>
-          <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item bd-tw-button button" href="/videos">
-              <i class="fab fa-youtube"></i>   Videos
-            </a>
-            <a class="navbar-item bd-tw-button button" href="/articles">
-              <i class="fab fa-medium"></i>   Articles
-            </a>
-          </div>
-          <hr class="navbar-divider">
-        </div>
 
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            Find us
-          </a>
-          <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
-              <i class="fab fa-twitter"></i>&nbsp;Twitter
-            </a>
-            <a class="navbar-item bd-tw-button button" href="{{ site.author.facebook }}">
-              <i class="fab fa-facebook"></i>&nbsp;Facebook
-            </a>
-            <a class="navbar-item bd-tw-button button" href="{{ site.author.instagram }}">
-              <i class="fab fa-instagram"></i>&nbsp;Instagram
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+
+<header class="headerbar">
+  <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+  <div class="site-name">News Site</div>
+</header>
+
+<amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+  <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+  <ul class="sidebar">
+    <li><a href="#">Example 1</a></li>
+    <li><a href="#">Example 2</a></li>
+    <li><a href="#">Example 3</a></li>
+  </ul>
+</amp-sidebar>
+-->
 
 {{ content }}
 <footer class="footer">
@@ -172,6 +229,8 @@
     </div>
   </div>
 </footer>
+
+<!--
 {% if page.leaflet %} <script src="/assets/js/leaflet.js"></script> {% endif %}
 <script type="text/javascript">{% include navburger_click.min.js  %}</script>
 {% if page.bulma_carousel %}
@@ -186,11 +245,9 @@ var carousels = bulmaCarousel.attach(); // carousels now contains an array of al
 var accordions = bulmaAccordion.attach(); // accordions now contains an array of all Accordion instances
 </script>
 {% endif %}
-
 {% if page.map_leaflet %}
 <script type="text/javascript">{% include map_leaflet.min.js  %}</script>
 {% endif %}
-
 {% if page.map_leaflet_landing %}
 <script type="text/javascript">{% include map_leaflet_landing.min.js  %}</script>
 {% endif %}
@@ -198,5 +255,6 @@ var accordions = bulmaAccordion.attach(); // accordions now contains an array of
   <link rel="stylesheet" type="text/css" href="/assets/css/application.css"/>
 </noscript>
 <script type="text/javascript">{% include defer_css_loading.min.js  %}</script>
+-->
 </body>
 </html>

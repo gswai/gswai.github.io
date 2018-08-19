@@ -1,0 +1,281 @@
+/**
+ * Site header
+ */
+.site-header {
+    min-height: 80px;
+    padding: $spacing-unit/2 0;
+    // Positioning context for the mobile navigation icon
+    position: relative;
+    background: $primary;
+    a{
+      color:#fff;
+    }
+}
+
+.header-nav .site-nav{
+  position: absolute;
+    right: 40px;
+    top: 26px;
+    font-weight: 700;
+}
+.site-title {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    //float: left;
+}
+
+span {
+    margin: 0 10px;
+}
+
+span:first-of-type {
+    margin-left: 0;
+}
+
+span:last-of-type {
+    margin-right: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.is-horizontal-center {
+  justify-content: center;
+}
+
+$hero-height: 100vh;
+
+.hero-section {
+  background: url('/assets/images/GSWAI_withoutlogo.jpg') 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-nav {
+  float: right;
+  position: absolute;
+  top: 18px;
+  right: $spacing-unit / 2;
+  border: 1px solid $grey-color-light;
+  border-radius: 5px;
+
+  .menu-icon {
+    float: right;
+    width: 36px;
+    height: 36px;
+    line-height: 0;
+    background: none;
+    border: 0;
+    outline: 0;
+
+    > svg {
+      width: 18px;
+      height: 15px;
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .trigger {
+    clear: both;
+    display: none;
+  }
+
+    @include media-query($on-palm) {
+      position: relative;
+      background-color: transparent;
+      border: none;
+
+      .menu-icon {
+        display: none;
+      }
+
+      .trigger {
+        display: block;
+      }
+
+      .page-link {
+        display: inline;
+      }
+    }
+  }
+
+  .page-link {
+    display: block;
+    padding: 5px 10px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    margin-left: 20px;
+  }
+
+  amp-sidebar {
+    width: 200px;
+    padding-right: 10px;
+  }
+
+  .amp-close-image {
+    top: 10px;
+    left: 175px;
+    cursor: pointer;
+  }
+
+.author{
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    margin: 60px 0 10px 0;
+  .avatar{
+    width: 90px;
+    height:90px;
+    margin: 0 auto;
+    img{
+      border-radius: 50%;
+      border-color: aliceblue;
+    }
+  }
+  h1{
+    margin:12px 0 0 0;
+    font-size: 30px;
+    color: #fff;
+  }
+  h2{
+    font-size: 19px;
+    color: #E0E0E0;
+  }
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+    padding: $spacing-unit 0;
+    background: #37474F;
+    color: #90A4AE;
+}
+/**
+ * Page content
+ */
+.page-content {
+    padding: 80px 0;
+    display: block;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+    text-align: center;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 28px;
+
+        @include media-query($on-laptop) {
+            font-size: 32px;
+        }
+    }
+
+    h3 {
+        font-size: 22px;
+
+        @include media-query($on-laptop) {
+            font-size: 26px;
+        }
+    }
+
+    h4 {
+        font-size: 18px;
+
+        @include media-query($on-laptop) {
+            font-size: 20px;
+        }
+    }
+}
+
+.pagination {
+    width: 100%;
+    padding: 20px 0;
+    display: block;
+    position: relative;
+    a{
+        background: #E3F2FD;
+        padding: 5px 7px;
+    }
+    .prev {
+        float: left;
+    }
+    .next {
+        float: right;
+    }
+}
