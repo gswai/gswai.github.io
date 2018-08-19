@@ -7,6 +7,10 @@
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
@@ -16,54 +20,13 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
     <style amp-custom>
-    {% capture include_to_scssify %}
-    {% include main.scss %}
-    {% endcapture %}
-    {{ include_to_scssify | scssify }}
+    {% include purify/main.css %}
     </style>
 
-    <!--
-    <style amp-custom>
-      .home-button {
-        margin-top: 8px;
-      }
-      .headerbar {
-        height: 50px;
-        position: fixed;
-        z-index: 999;
-        top: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-      }
-      .site-name {
-        flex: 1;
-        margin-left: -36px;
-      }
-      article {
-        margin-top: 50px;
-      }
-      .hamburger {
-        padding-left: 10px;
-      }      
-      .sidebar {
-        padding: 10px;
-        margin: 0;
-      }
-      .sidebar > li {
-        list-style: none;
-        margin-bottom:10px;
-      }
-      .sidebar a {
-        text-decoration: none;
-      }
-      .close-sidebar {
-        font-size: 1.5em;
-        padding-left: 5px;
-      }
-    </style>
-    -->
 
     {% include color-browser.html %}
     {% seo %}
@@ -71,8 +34,134 @@
       {% include analytics.html %}
     {% endif %}
 </head>
-<body>
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top is-primary">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="/">
+          <amp-img src="/assets/images/logo_small.svg" alt="GSWAI" width="40" height="40"></amp-img>
+        </a>
+      </div>
+      <a class="navbar-burger burger" on='tap:sidebar.toggle' data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
 
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/">
+          Global SWAI
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <a class="navbar-item is-link" href="/#about">
+          Get involved
+        </a>
+
+        <a class="navbar-item" href="/gswai2017">
+          GSWAI 2017
+        </a>
+
+        <!--
+        <a class="navbar-item" href="/team">
+          Team
+        </a>
+        -->
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Media
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item bd-tw-button button" href="/videos">
+              <i class="fab fa-youtube"></i>   Videos
+            </a>
+            <a class="navbar-item bd-tw-button button" href="/articles">
+              <i class="fab fa-medium"></i>   Articles
+            </a>
+          </div>
+          <hr class="navbar-divider">
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Find us
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
+              <i class="fab fa-twitter"></i>&nbsp;Twitter
+            </a>
+            <a class="navbar-item bd-tw-button button" href="{{ site.author.facebook }}">
+              <i class="fab fa-facebook"></i>&nbsp;Facebook
+            </a>
+            <a class="navbar-item bd-tw-button button" href="{{ site.author.instagram }}">
+              <i class="fab fa-instagram"></i>&nbsp;Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <amp-sidebar id="sidebar"
+    layout="nodisplay"
+    side="right">
+    <amp-img class="amp-close-image"
+      src="/assets/images/close.png"
+      width="20"
+      height="20"
+      alt="close sidebar"
+      on="tap:sidebar.close"
+      role="button"
+      tabindex="0"></amp-img>
+    <a class="navbar-item" href="/">
+      Global SWAI
+    </a>
+    <a class="navbar-item is-link" href="/#about">
+      Get involved
+    </a>
+    <a class="navbar-item" href="/gswai2017">
+      GSWAI 2017
+    </a>
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        Media
+      </a>
+      <div class="navbar-dropdown is-boxed">
+        <a class="navbar-item bd-tw-button button" href="/videos">
+          <i class="fab fa-youtube"></i>   Videos
+        </a>
+        <a class="navbar-item bd-tw-button button" href="/articles">
+          <i class="fab fa-medium"></i>   Articles
+        </a>
+      </div>
+      <hr class="navbar-divider">
+    </div>
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        Find us
+      </a>
+      <div class="navbar-dropdown is-boxed">
+        <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
+          <i class="fab fa-twitter"></i>&nbsp;Twitter
+        </a>
+        <a class="navbar-item bd-tw-button button" href="{{ site.author.facebook }}">
+          <i class="fab fa-facebook"></i>&nbsp;Facebook
+        </a>
+        <a class="navbar-item bd-tw-button button" href="{{ site.author.instagram }}">
+          <i class="fab fa-instagram"></i>&nbsp;Instagram
+        </a>
+      </div>
+    </div>
+  </amp-sidebar>
+
+
+
+<!--
 
   <header class="site-header">
     <amp-img class="amp-sidebar-image"
@@ -131,11 +220,6 @@
   </amp-sidebar>
 
 
-
-<!--
-
-
-
 <header class="headerbar">
   <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
   <div class="site-name">News Site</div>
@@ -181,33 +265,39 @@
             Find us!
           </p>
           {% if site.author.github %}
-            <a class="icon" href="{{ site.author.github }}">
-              <i class="fab fa-github"></i>
+           &nbsp; 
+            <a class="icon is-medium" href="{{ site.author.github }}">
+              <i class="fab fa-github fa-2x"></i>
             </a>
           {% endif %}
           {% if site.author.facebook %}
-          <a class="icon" href="{{ site.author.facebook }}">
-            <i class="fab fa-facebook"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="{{ site.author.facebook }}">
+            <i class="fab fa-facebook fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.twitter %}
-          <a class="icon" href="{{ site.author.twitter }}">
-            <i class="fab fa-twitter"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="{{ site.author.twitter }}">
+            <i class="fab fa-twitter fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.instagram %}
-          <a class="icon" href="{{ site.author.instagram }}">
-            <i class="fab fa-instagram"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="{{ site.author.instagram }}">
+            <i class="fab fa-instagram fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.medium %}
-          <a class="icon" href="{{ site.author.medium }}">
-            <i class="fab fa-medium"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="{{ site.author.medium }}">
+            <i class="fab fa-medium fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.email %}
-          <a class="icon" href="mailto:{{ site.author.email }}">
-            <i class="fas fa-envelope-open"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="mailto:{{ site.author.email }}">
+            <i class="fas fa-envelope-open fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.tumblr %}
@@ -233,12 +323,6 @@
 <!--
 {% if page.leaflet %} <script src="/assets/js/leaflet.js"></script> {% endif %}
 <script type="text/javascript">{% include navburger_click.min.js  %}</script>
-{% if page.bulma_carousel %}
-<script src="{{ "/assets/js/bulma-carousel.min.js" | prepend: site.baseurl }}"></script>
-<script>
-var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
-</script>
-{% endif %}
 
 {% if page.map_leaflet %}
 <script type="text/javascript">{% include map_leaflet.min.js  %}</script>

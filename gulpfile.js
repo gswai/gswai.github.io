@@ -4,6 +4,9 @@ var gulp = require('gulp'),
   image = require('gulp-image'),
   psi = require('psi'),
   gp_uglify = require('gulp-uglify');
+var sass = require('gulp-sass');
+var purify = require('gulp-purifycss');
+var minifyCss = require('gulp-minify-css');
 
 var site = 'https://d40e46fc.ngrok.io';
 
@@ -53,25 +56,43 @@ gulp.task('image', function () {
 });
 
 gulp.task('mobile', function () {
-    return psi(site, {
-        // key: key
-        nokey: 'true',
-        strategy: 'mobile',
-    }).then(function (data) {
-        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
-        console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
-        console.log(data.pageStats);
-    });
+  return psi(site, {
+    // key: key
+    nokey: 'true',
+    strategy: 'mobile',
+  }).then(function (data) {
+    console.log('Speed score: ' + data.ruleGroups.SPEED.score);
+    console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
+    console.log(data.pageStats);
+  });
 });
 
 gulp.task('desktop', function () {
-    return psi(site, {
-        nokey: 'true',
-        // key: key,
-        strategy: 'desktop',
-    }).then(function (data) {
-        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
-    });
+  return psi(site, {
+    nokey: 'true',
+    // key: key,
+    strategy: 'desktop',
+  }).then(function (data) {
+    console.log('Speed score: ' + data.ruleGroups.SPEED.score);
+  });
 });
+
+gulp.task('sass', function () {
+  return gulp.src('./_sass/main.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./_includes/'));
+});
+
+// purify removes unused CSS classes
+gulp.task('purify', function() {
+  return gulp.src('./_includes/main.css')
+    .pipe(purify(['./_layouts/default.html', './_pages/index.html', './_pages/gswai2017.html'], {info: true, rejected: true}))
+    .pipe(minifyCss())
+    .pipe(gulp.dest('./_includes/purify'));
+});
+
+gulp.task("watch", ["purify"], function() {
+  gulp.watch("./_pages/*", ["purify"])
+})
 
 gulp.task('default', ['navburger', 'map_leaflet_landing', 'map_leaflet', 'defer_css_loading', 'mobile'], function(){});

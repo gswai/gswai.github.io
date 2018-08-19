@@ -69,18 +69,6 @@ span:last-of-type {
   justify-content: center;
 }
 
-$hero-height: 100vh;
-
-.hero-section {
-  background: url('/assets/images/GSWAI_withoutlogo.jpg') 50% no-repeat;
-  background-size: cover;
-  height: $hero-height;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .site-nav {
   float: right;
   position: absolute;

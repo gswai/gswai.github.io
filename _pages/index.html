@@ -10,15 +10,15 @@ bulma_accordion: true
   <div class="hero-body has-bg-img">
 
     <div class="container">
-      <div id="mapid_landing" style="height: 300px; width: 100%;"></div>
-      <br>
-      <!--
-      <div class='card-content is-flex is-horizontal-center'>
-        <figure class="image">
-          <img src="/assets/images/GSWAI_yellow.svg" alt="GSWAI">
-        </figure>
-      </div>
-      -->
+      <amp-img alt="Hummingbird"
+        src="/assets/images/map_wide.svg"
+        width="640"
+        height="457"
+        layout="responsive"
+        srcset="/assets/images/map_wide.svg 640w,
+        /assets/images/map_vertical.svg 320w">
+      </amp-img>
+
     </div>
     <div class="container">
       <h1 class="title has-text-centered">
@@ -49,7 +49,36 @@ bulma_accordion: true
         What is Global Startup Weekend AI (GSWAI)? 
       </h1>
 
-      <amp-img src="/assets/images/photos/StartupWeekend.jpg" height="150" width="300" layout="responsive"></amp-img>
+
+
+      <div class="video-player">
+
+        <amp-video id="myVideo"
+          controls
+          width="1280"
+          height="720"
+          poster="/assets/images/photos/StartupWeekend.jpg"
+          layout="responsive"
+          src="https://localhost:4000/assets/videos/SWAIMontreal.mp4">
+        </amp-video>
+
+        <div id="myOverlay"
+          class="click-to-play-overlay">
+
+          <h3 class="video-title">SWAI Montreal 2017</h3>
+
+          <div class="play-icon"
+            role="button"
+            tabindex="0"
+            on="tap:myOverlay.hide, myVideo.play"></div>
+
+          <amp-img class="poster-image" src="/assets/images/photos/StartupWeekend.jpg" height="100" width="300" layout="fill"></amp-img>
+        </div>
+
+      </div>
+
+
+
 
       GSWAI is a global initiative that started in Paris in 2016, and after a 
       success, it went global  to make artificial intelligence technologies 
@@ -82,16 +111,16 @@ bulma_accordion: true
       <h2 class="subtitle has-text-centered">
         3 incredible ways to get involved
       </h2>
-      <div class="row">
+      <div class="columns">
 
         <div class="column">
           <div class='card-content is-flex is-horizontal-center'>
             <figure class="image is-128x128">
-              <amp-img src="/assets/images/getinvolved/organize.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+              <amp-img src="/assets/images/getinvolved/organize.svg" alt="partner" height="128" width="128" layout="responsive"></amp-img>
             </figure>
           </div>
 
-          <div class="dropdown">
+          <div class="dropdown is-hoverable">
             <div class="dropdown-trigger">
               <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu1">
                 <p>Organize a Startup Weekend AI (#SWAI)</p>
@@ -129,7 +158,7 @@ bulma_accordion: true
         <div class="column">
           <div class='card-content is-flex is-horizontal-center'>
             <figure class="image is-128x128">
-              <amp-img src="/assets/images/getinvolved/attend.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+              <amp-img src="/assets/images/getinvolved/attend.svg" alt="partner" height="128" width="128" layout="responsive"></amp-img>
             </figure>
           </div>
 
@@ -161,7 +190,7 @@ bulma_accordion: true
         <div class="column">
           <div class='card-content is-flex is-horizontal-center'>
             <figure class="image is-128x128">
-              <amp-img src="/assets/images/getinvolved/partner.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+              <amp-img src="/assets/images/getinvolved/partner.svg" alt="partner" height="128" width="128" layout="responsive"></amp-img>
             </figure>
           </div>
 
@@ -198,11 +227,11 @@ bulma_accordion: true
     <h1 class="title has-text-centered">
       WHY SHOULD I GET INVOLVED
     </h1>
-    <div class="row">
+    <div class="columns">
       <div class="column">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/forget_boundaries1.svg" alt="boun" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/whyinvolve/forget_boundaries1.svg" alt="boun" height="128" width="128" layout="responsive"></amp-img>
           </figure>
         </div>
         <div class="content">
@@ -213,7 +242,7 @@ bulma_accordion: true
       <div class="column">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/forget_boundaries.svg" alt="partner" height="150" width="300" layout="responsive"> </amp-img>
+            <amp-img src="/assets/images/whyinvolve/forget_boundaries.svg" alt="partner" height="128" width="128" layout="responsive"> </amp-img>
           </figure>
         </div>
         <div class="content">
@@ -223,7 +252,7 @@ bulma_accordion: true
       <div class="column">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/bridge_gap.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/whyinvolve/bridge_gap.svg" alt="partner" height="128" width="128" layout="responsive"></amp-img>
           </figure>
         </div>
         <div class="content">
@@ -233,11 +262,11 @@ bulma_accordion: true
       </div>
     </div>
 
-    <div class="row">
+    <div class="columns  is-desktop">
       <div class="column">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/get_resources.svg" alt="boun" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/whyinvolve/get_resources.svg" alt="boun" height="128" width="128" layout="responsive"></amp-img>
           </figure>
         </div>
         <div class="content">
@@ -248,7 +277,7 @@ bulma_accordion: true
       <div class="column">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/test_ideas.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/whyinvolve/test_ideas.svg" alt="partner" height="128" width="128" layout="responsive"></amp-img>
           </figure>
         </div>
         <div class="content">
@@ -258,7 +287,7 @@ bulma_accordion: true
       <div class="column">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/exclusive_prices.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/whyinvolve/exclusive_prices.svg" alt="partner" height="128" width="128" layout="responsive"></amp-img>
           </figure>
         </div>
         <div class="content">
@@ -274,16 +303,16 @@ bulma_accordion: true
   <div class="hero-body">
     <div class="container">
       <h1 class="title has-text-centered">
-        <a href="{{ "/articles" | prepend: site.baseurl }}" target="_blank"></a>WHAT’S THE LATEST
+        <a href="{{ "/articles" | prepend: site.baseurl }}" target="_blank">LAST ARTICLES</a>
       </h1>
-      <div class="row">
+      <div class="columns">
         {% for post in site.data.articles limit:3 offset:1 %}
         <div class="column is-one-third">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by2">
                 <a href="{{ post.medium_url }}">
-                  <amp-img src="/assets/images/posts/{{ post.image_post }}" alt="Placeholder image"  height="150" width="300" layout="responsive"></amp-img>
+                  <amp-img src="/assets/images/posts/{{ post.image_post }}" alt="Placeholder image"  height="2.0" width="4.0" layout="responsive"></amp-img>
                 </a>
               </figure>
             </div>
@@ -295,14 +324,13 @@ bulma_accordion: true
                   </figure>
                 </div>
                 <div class="media-content">
-                  <a class="title is-4" href="{{ post.medium_url }}">{{ post.author }}</a> <br>
-                  <a class="subtitle is-6" href="{{ post.medium_url }}">{{ post.date | date: "%b %-d, %Y" }}</a>
+                  <a class="content" href="{{ post.medium_url }}"><strong>{{ post.author }}</strong></a> <br>
+                  <p class="content" href="{{ post.medium_url }}">{{ post.date | date: "%b %-d, %Y" }}</p>
                 </div>
               </div>
 
               <div class="content">
                 {{ post.title }}
-                <br>
               </div>
             </div>
           </div>
@@ -314,58 +342,58 @@ bulma_accordion: true
 </section>
 
 <section class="section">
-  <div class="container">
+  <div class="container is-fullhd">
     <h1 class="title has-text-centered">
       Global Sponsors
     </h1>
 
-    <div class="row is-horizontal-center is-multiline">
+    <div class="columns is-horizontal-center is-multiline is-gapless">
       <div class="column is-one-quarter">
         <div class='card-content is-horizontal-center'>
           <figure class="image">
-            <amp-img src="/assets/images/partners/franceai.svg" alt="boun" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/partners/franceai.svg" alt="boun" height="128" width="256" layout="responsive"></amp-img>
           </figure>
         </div>
       </div>
       <div class="column is-one-quarter">
         <div class='card-content is-horizontal-center'>
           <figure class="image">
-            <amp-img src="/assets/images/partners/wayra.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/partners/wayra.svg" alt="partner" height="128" width="256" layout="responsive"></amp-img>
           </figure>
         </div>
       </div>
       <div class="column is-one-quarter">
         <div class='card-content is-horizontal-center'>
           <figure class="image">
-            <amp-img src="/assets/images/partners/bridge.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/partners/bridge.svg" alt="partner" height="128" width="256" layout="responsive"></amp-img>
           </figure>
         </div>
       </div>
       <div class="column is-one-quarter">
         <div class='card-content is-horizontal-center'>
           <figure class="image">
-            <amp-img src="/assets/images/partners/google.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/partners/google.svg" alt="partner" height="128" width="256" layout="responsive"></amp-img>
           </figure>
         </div>
       </div>
       <div class="column is-one-quarter">
         <div class='card-content is-horizontal-center'>
           <figure class="image">
-            <amp-img src="/assets/images/partners/accelerateur.svg" alt="boun" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/partners/accelerateur.svg" alt="boun" height="128" width="256" layout="responsive"></amp-img>
           </figure>
         </div>
       </div>
       <div class="column is-one-quarter">
         <div class='card-content is-horizontal-center'>
           <figure class="image">
-            <amp-img src="/assets/images/partners/loreal.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/partners/loreal.svg" alt="partner" height="128" width="256" layout="responsive"></amp-img>
           </figure>
         </div>
       </div>
       <div class="column is-one-quarter">
         <div class='card-content is-horizontal-center'>
           <figure class="image">
-            <amp-img src="/assets/images/partners/techstars.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/partners/techstars.svg" alt="partner" height="128" width="256" layout="responsive"></amp-img>
           </figure>
         </div>
       </div>
@@ -375,32 +403,26 @@ bulma_accordion: true
 </section>
 
 <section class="section is-small">
-  <div class="container">
+  <div class="container is-fullhd">
     <h3 class="title has-text-centered">
       Global Technology Partners
     </h3>
 
-    <div class="row is-multiline is-horizontal-center">
-      <div class="column is-one-third">
-        <div class='is-flex is-horizontal-center'>
-        <figure class="image is-128x128">
-          <amp-img src="/assets/images/partners/snips.svg" alt="boun" height="150" width="300" layout="responsive"></amp-img>
+    <div class="columns is-multiline is-gapless">
+      <div class="column is-one-third is-centered">
+        <figure class="image">
+          <amp-img src="/assets/images/partners/snips.svg" alt="boun" height="128" width="128" layout="responsive"></amp-img>
         </figure>
       </div>
-      </div>
-      <div class="column is-one-third">
-        <div class='is-flex is-horizontal-center'>
-        <figure class="image is-128x128">
-          <amp-img src="/assets/images/partners/recast.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+      <div class="column is-one-third is-centered">
+        <figure class="image">
+          <amp-img src="/assets/images/partners/recast.svg" alt="partner" height="128" width="128" layout="responsive"></amp-img>
         </figure>
       </div>
-      </div>
-      <div class="column is-one-third">
-        <div class='is-flex is-horizontal-center'>
-        <figure class="image is-128x128">
-          <amp-img src="/assets/images/partners/ibm-watson.png" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+      <div class="column is-one-third is-centered">
+        <figure class="image">
+          <amp-img src="/assets/images/partners/ibm-watson.png" alt="partner" height="128" width="128" layout="responsive"></amp-img>
         </figure>
-      </div>
       </div>
     </div>
 
@@ -408,46 +430,36 @@ bulma_accordion: true
 </section>
 
 <section class="section is-small">
-  <div class="container">
+  <div class="container is-fullhd">
     <h3 class="title has-text-centered">
       Global Community Partners
     </h3>
 
-    <div class="row is-multiline is-horizontal-center">
+    <div class="columns is-multiline is-horizontal-center is-gapless">
       <div class="column is-one-third">
-        <div class='card-content'>
-          <figure class="image">
-            <amp-img src="/assets/images/partners/hellotomorrow.svg" alt="hello tomorrow" height="150" width="300" layout="responsive"></amp-img>
-          </figure>
-        </div>
+        <figure class="image">
+          <amp-img src="/assets/images/partners/hellotomorrow.svg" alt="hello tomorrow" height="128" width="256" layout="responsive"></amp-img>
+        </figure>
       </div>
       <div class="column is-one-third">
-        <div class='card-content'>
-          <figure class="image">
-            <amp-img src="/assets/images/partners/tencent.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
-          </figure>
-        </div>
+        <figure class="image">
+          <amp-img src="/assets/images/partners/tencent.svg" alt="partner" height="128" width="256" layout="responsive"></amp-img>
+        </figure>
       </div>
       <div class="column is-one-third">
-        <div class='card-content'>
-          <figure class="image">
-            <amp-img src="/assets/images/partners/cityai.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
-          </figure>
-        </div>
+        <figure class="image">
+          <amp-img src="/assets/images/partners/cityai.svg" alt="partner" height="128" width="256" layout="responsive"></amp-img>
+        </figure>
       </div>
       <div class="column is-one-third">
-        <div class='card-content'>
-          <figure class="image">
-            <amp-img src="/assets/images/partners/hashtagtrophy.svg" alt="boun" height="150" width="300" layout="responsive"></amp-img>
-          </figure>
-        </div>
+        <figure class="image">
+          <amp-img src="/assets/images/partners/hashtagtrophy.svg" alt="boun" height="128" width="256" layout="responsive"></amp-img>
+        </figure>
       </div>
       <div class="column is-one-third">
-        <div class='card-content'>
-          <figure class="image">
-            <amp-img src="/assets/images/partners/vertica.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
-          </figure>
-        </div>
+        <figure class="image">
+          <amp-img src="/assets/images/partners/vertica.svg" alt="partner" height="128" width="256" layout="responsive"></amp-img>
+        </figure>
       </div>
     </div>
   </div>
@@ -460,18 +472,18 @@ bulma_accordion: true
       Global Media Partners
     </h3>
 
-    <div class="row is-gapless">
+    <div class="columns is-gapless">
       <div class="column">
         <div class='is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/partners/frenchweb.png" alt="boun" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/partners/frenchweb.png" alt="boun" height="128" width="128" layout="responsive"></amp-img>
           </figure>
         </div>
       </div>
       <div class="column">
         <div class='is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/partners/maddyness.svg" alt="partner" height="150" width="300" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/partners/maddyness.svg" alt="partner" height="128" width="128" layout="responsive"></amp-img>
           </figure>
         </div>
       </div>
