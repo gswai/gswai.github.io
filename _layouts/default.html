@@ -239,12 +239,7 @@
 var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
 </script>
 {% endif %}
-{% if page.bulma_accordion %}
-<script type="text/javascript" src="{{ "/assets/js/bulma-accordion.min.js" | prepend: site.baseurl }}"></script>
-<script>
-var accordions = bulmaAccordion.attach(); // accordions now contains an array of all Accordion instances
-</script>
-{% endif %}
+
 {% if page.map_leaflet %}
 <script type="text/javascript">{% include map_leaflet.min.js  %}</script>
 {% endif %}

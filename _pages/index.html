@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /index
+permalink: /
 leaflet: true
 map_leaflet_landing: true
 bulma_accordion: true
@@ -91,25 +91,39 @@ bulma_accordion: true
             </figure>
           </div>
 
-          <section class="accordions">
-            <article class="accordion is-primary">
-              <div class="accordion-header toggle">
+          <div class="dropdown">
+            <div class="dropdown-trigger">
+              <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu1">
                 <p>Organize a Startup Weekend AI (#SWAI)</p>
-                <a class="button">
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down"></i>
-                  </span>
-                </a>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu1" role="menu">
+              <div class="dropdown-content">
+                <p class="dropdown-item">
+                  On the weekends of Global Startup Weekend AI end of 2018, 
+                  organize a Startup Weekend Artificial Intelligence in your 
+                  community!  Startup Weekend is a 54-hour event designed to 
+                  provide superior experiential education for technical and 
+                  non-technical entrepreneurs, students and everybody 
+                  interested in the entrepreneurial experience. The weekend 
+                  event is centered on action, innovation, and education.  
+                  Beginning on Friday night with an idea pitching session and 
+                  continuing throughout the weekend with testing, business 
+                  model development, and basic prototype creation, Startup 
+                  Weekend culminates on Sunday night with demo pitching in 
+                  front of a panel of potential investors and local 
+                  entrepreneurs.  Participants are challenged with building 
+                  functional startups during the event and are able to 
+                  collaborate with like-minded individuals.
+                </p>
               </div>
-              <div class="accordion-body">
-                <div class="accordion-content">
-                  On the weekends of Global Startup Weekend AI end of 2018, organize a Startup Weekend Artificial Intelligence in your community!  Startup Weekend is a 54-hour event designed to provide superior experiential education for technical and non-technical entrepreneurs, students and everybody interested in the entrepreneurial experience. The weekend event is centered on action, innovation, and education.  Beginning on Friday night with an idea pitching session and continuing throughout the weekend with testing, business model development, and basic prototype creation, Startup Weekend culminates on Sunday night with demo pitching in front of a panel of potential investors and local entrepreneurs.  Participants are challenged with building functional startups during the event and are able to collaborate with like-minded individuals outside of their
-                </div>
-              </div>
-            </article>
-          </section>
-
+            </div>
+          </div>
         </div>
+
 
 
         <div class="column">
@@ -119,29 +133,31 @@ bulma_accordion: true
             </figure>
           </div>
 
-          <section class="accordions">
-            <article class="accordion is-primary">
-              <div class="accordion-header toggle">
+
+          <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+              <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu2">
                 <p>Attend</p>
-                <a class="button">
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down"></i>
-                  </span>
-                </a>
-              </div>
-              <div class="accordion-body">
-                <div class="accordion-content">
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+              <div class="dropdown-content">
+                <p class="dropdown-item">
                   Make your idea a reality. Join thousands of entrepreneurs around 
                   the world for the most exciting two weekends of the year and 
                   connect with the most qualified global mentors. <br> Get access to 
                   resources and connections such as pre-event workshops, remote 
                   mentoring, and live sessions with global communities during the 
                   weekend!
-                </div>
+                </p>
               </div>
-            </article>
-          </section>
+            </div>
+          </div>
         </div>
+
         <div class="column">
           <div class='card-content is-flex is-horizontal-center'>
             <figure class="image is-128x128">
@@ -149,28 +165,28 @@ bulma_accordion: true
             </figure>
           </div>
 
-          <section class="accordions">
-            <article class="accordion is-primary">
-              <div class="accordion-header toggle">
+          <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+              <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-partner">
                 <p>Partner UP</p>
-                <a class="button">
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down"></i>
-                  </span>
-                </a>
-              </div>
-              <div class="accordion-body">
-                <div class="accordion-content">
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-partner" role="menu">
+              <div class="dropdown-content">
+                <div class="dropdown-item">
                   Want to help support startups locally, regionally or globally? <br>
                   <p class="has-text-centered">
                     <a class="button is-link" href="mailto:{{ site.author.email }}">Let's talk</a>
                   </p>
                 </div>
               </div>
-            </article>
-          </section>
-
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </div>

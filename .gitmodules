@@ -4,6 +4,3 @@
 [submodule "_sass/bulma-carousel"]
 	path = _sass/bulma-carousel
 	url = https://github.com/Wikiki/bulma-carousel.git
-[submodule "_sass/bulma-accordion"]
-	path = _sass/bulma-accordion
-	url = https://github.com/Wikiki/bulma-accordion.git
