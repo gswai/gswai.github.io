@@ -8,90 +8,65 @@ permalink: /team
   <div class="hero-body">
     <div class="container">
       <h1 class="title has-text-centered">
-        Team
+        Behind the scence
       </h1>
 
 
 
       <div class="columns is-multiline is-horizontal-center">
 
-        <div class="column is-one-third">
+        {% for member in site.data.team %}
+        <div class="column is-3">
           <div class="card">
             <div class="card-image">
               <figure class="image is-1by1">
-                <img src="/assets/images/team/laura.jpg" alt="Placeholder image">
+                <img class="is-rounded" src="{{ member.img }}" alt="{{ member.name }}">
               </figure>
             </div>
             <div class="card-content">
 
               <div class="content">
-                <h2>Laura Calmore</h2>
-                <a class="icon" href="https://www.linkedin.com/in/laura-calmore-9a128163/">
+                <h2>{{ member.name }}</h2>
+                <a class="icon" href="{{ member.linkedin }}">
                   <i class="fab fa-linkedin"></i>
                 </a>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-1by1">
-                <img src="/assets/images/team/lucia.jpg" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-
-              <div class="content">
-                <h2>Lucia Cardenas</h2>
-                <a class="icon" href="https://www.linkedin.com/in/luciacardenasmelgarejo/">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-1by1">
-                <img src="/assets/images/team/cristian.jpg" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-
-              <div class="content">
-                <h2>Cristian Perez</h2>
-                <a class="icon" href="https://www.linkedin.com/in/cristianperezbrokate/">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-1by1">
-                <img src="/assets/images/team/wael.jpg" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-
-              <div class="content">
-                <h2>Wael Yahyaoui</h2>
-                <a class="icon" href="https://www.linkedin.com/in/waelyahyaoui">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
 
       </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title has-text-centered">
+        Quotes
+      </h1>
+
+      {% for quote in site.data.quotes %}
+      <article class="media">
+        <figure class="media-left">
+          <p class="image is-64x64">
+            <img src="{{ quote.img }}">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>{{ quote.author }}</strong> <small>{{ quote.title }}</small>
+              <br>
+              {{ quote.text }}
+            </p>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
 
     </div>
   </div>
