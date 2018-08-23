@@ -130,5 +130,6 @@ modules.xml
 # *.ipr
 
 node_modules
+_sass/main.css
 
 # End of https://www.gitignore.io/api/sass,linux,jekyll,ruby,webstorm

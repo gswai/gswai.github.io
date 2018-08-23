@@ -194,27 +194,30 @@ bulma_carousel: true
 
 <section class="is-large section-padding-large">
   <div class="container">
-    <div class='carousel carousel-animated carousel-animate-slide' data-size="2">
-      <div class='carousel-container'>
 
-
-        {% for photo in site.data.photos %}
-          <div class='carousel-item has-background is-active'>
-            <img class="is-background" src="/assets/images/photos/{{ photo.url }}" alt="" width="640" height="310" />
-            <div class="title">{{ photo.title | truncate: 80 }}</div>
-          </div>
-        {% endfor %}
-
-      </div>
-      <div class="carousel-navigation is-overlay">
-        <div class="carousel-nav-left">
-          <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        </div>
-        <div class="carousel-nav-right">
-          <i class="fa fa-chevron-right" aria-hidden="true"></i>
-        </div>
-      </div>
+  <amp-carousel class="collapsible-captions"
+  height="320"
+  layout="fixed-height"
+  controls
+  loop
+  autoplay
+  delay="3000"
+  type="slides">
+  {% for photo in site.data.photos %}
+  <figure>
+    <div class="fixed-height-container">
+      <amp-img layout="fill"
+        src="/assets/images/photos/{{ photo.url }}"></amp-img>
     </div>
+    <figcaption on="tap:AMP.setState({expanded: !expanded})"
+      tabindex="0"
+      role="button"
+      [class]="expanded ? 'expanded' : ''">{{ photo.title }}<span [text]="expanded ? '&#9660;' : '&#9650;'">&#9650;</span>
+    </figcaption>
+  </figure>
+  {% endfor %}
+  </amp-carousel>
+
   </div>
 </section>
 

@@ -1,0 +1,16 @@
+{% if page.leaflet %}
+<link rel="stylesheet" href="/assets/css/leaflet.css" />
+{% endif %}
+
+
+{% if page.leaflet %} <script src="/assets/js/leaflet.js"></script> {% endif %}
+{% if page.map_leaflet %}
+<script type="text/javascript">{% include map_leaflet.min.js  %}</script>
+{% endif %}
+{% if page.map_leaflet_landing %}
+<script type="text/javascript">{% include map_leaflet_landing.min.js  %}</script>
+{% endif %}
+<noscript id="deferred-styles">
+  <link rel="stylesheet" type="text/css" href="/assets/css/application.css"/>
+</noscript>
+<script type="text/javascript">{% include defer_css_loading.min.js  %}</script>

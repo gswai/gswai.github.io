@@ -1,20 +1,32 @@
-<!DOCTYPE html>
-<html  lang="en">
+<!doctype html>
+<html amp lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml" />
 
-    <style>
-    {% capture include_to_scssify %}
-    {% include main.scss %}
-    {% endcapture %}
-    {{ include_to_scssify | scssify }}
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <style amp-custom>
+    {% include main-min.css %}
     </style>
+
 
     {% include color-browser.html %}
     {% seo %}
@@ -25,16 +37,16 @@
 <body class="has-navbar-fixed-top">
   <nav class="navbar is-fixed-top is-primary">
     <div class="navbar-brand">
-      <div class="navbar-item" href="https://bulma.io">
+      <div class="navbar-item">
         <a href="/">
-          <img src="/assets/images/logo_small.svg" alt="GSWAI" width="100" height="200">
+          <amp-img src="/assets/images/logo_small.svg" alt="GSWAI" width="40" height="40"></amp-img>
         </a>
       </div>
-      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <a class="navbar-burger burger" on='tap:sidebar.toggle' data-target="navbarExampleTransparentExample">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </a>
     </div>
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
@@ -92,6 +104,62 @@
     </div>
   </nav>
 
+
+  <amp-sidebar id="sidebar"
+    layout="nodisplay"
+    side="right">
+    <amp-img class="amp-close-image"
+      src="/assets/images/close.png"
+      width="20"
+      height="20"
+      alt="close sidebar"
+      on="tap:sidebar.close"
+      role="button"
+      tabindex="0"></amp-img>
+    <a class="navbar-item" href="/">
+      Global SWAI
+    </a>
+    <a class="navbar-item is-link" href="/#about">
+      Get involved
+    </a>
+    <a class="navbar-item" href="/gswai2017">
+      GSWAI 2017
+    </a>
+    <a class="navbar-item" href="/team">
+      Team
+    </a>
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        Media
+      </a>
+      <div class="navbar-dropdown is-boxed">
+        <a class="navbar-item bd-tw-button button" href="/videos">
+          <i class="fab fa-youtube"></i>   Videos
+        </a>
+        <a class="navbar-item bd-tw-button button" href="/articles">
+          <i class="fab fa-medium"></i>   Articles
+        </a>
+      </div>
+      <hr class="navbar-divider">
+    </div>
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        Find us
+      </a>
+      <div class="navbar-dropdown is-boxed">
+        <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
+          <i class="fab fa-twitter"></i>&nbsp;Twitter
+        </a>
+        <a class="navbar-item bd-tw-button button" href="{{ site.author.facebook }}">
+          <i class="fab fa-facebook"></i>&nbsp;Facebook
+        </a>
+        <a class="navbar-item bd-tw-button button" href="{{ site.author.instagram }}">
+          <i class="fab fa-instagram"></i>&nbsp;Instagram
+        </a>
+      </div>
+    </div>
+  </amp-sidebar>
+
 {{ content }}
 <footer class="footer">
   <div class="container">
@@ -122,33 +190,39 @@
             Find us!
           </p>
           {% if site.author.github %}
-            <a class="icon" href="{{ site.author.github }}">
-              <i class="fab fa-github"></i>
+           &nbsp; 
+            <a class="icon is-medium" href="{{ site.author.github }}">
+              <i class="fab fa-github fa-2x"></i>
             </a>
           {% endif %}
           {% if site.author.facebook %}
-          <a class="icon" href="{{ site.author.facebook }}">
-            <i class="fab fa-facebook"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="{{ site.author.facebook }}">
+            <i class="fab fa-facebook fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.twitter %}
-          <a class="icon" href="{{ site.author.twitter }}">
-            <i class="fab fa-twitter"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="{{ site.author.twitter }}">
+            <i class="fab fa-twitter fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.instagram %}
-          <a class="icon" href="{{ site.author.instagram }}">
-            <i class="fab fa-instagram"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="{{ site.author.instagram }}">
+            <i class="fab fa-instagram fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.medium %}
-          <a class="icon" href="{{ site.author.medium }}">
-            <i class="fab fa-medium"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="{{ site.author.medium }}">
+            <i class="fab fa-medium fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.email %}
-          <a class="icon" href="mailto:{{ site.author.email }}">
-            <i class="fas fa-envelope-open"></i>
+           &nbsp; 
+          <a class="icon is-medium" href="mailto:{{ site.author.email }}">
+            <i class="fas fa-envelope-open fa-2x"></i>
           </a>
           {% endif %}
           {% if site.author.tumblr %}
@@ -170,25 +244,6 @@
     </div>
   </div>
 </footer>
-{% if page.leaflet %} <script src="/assets/js/leaflet.js"></script> {% endif %}
-<script type="text/javascript">{% include navburger_click.min.js  %}</script>
-{% if page.bulma_carousel %}
-<script src="{{ "/assets/js/bulma-carousel.min.js" | prepend: site.baseurl }}"></script>
-<script>
-var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
-</script>
-{% endif %}
 
-{% if page.map_leaflet %}
-<script type="text/javascript">{% include map_leaflet.min.js  %}</script>
-{% endif %}
-
-{% if page.map_leaflet_landing %}
-<script type="text/javascript">{% include map_leaflet_landing.min.js  %}</script>
-{% endif %}
-<noscript id="deferred-styles">
-  <link rel="stylesheet" type="text/css" href="/assets/css/application.css"/>
-</noscript>
-<script type="text/javascript">{% include defer_css_loading.min.js  %}</script>
 </body>
 </html>

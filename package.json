@@ -1,0 +1,30 @@
+{
+  "name": "gswai",
+  "version": "1.0.0",
+  "description": "Global Startup Weekend AI website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gswai/gswai.github.io.git"
+  },
+  "author": "Cristian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gswai/gswai.github.io/issues"
+  },
+  "homepage": "https://github.com/gswai/gswai.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-image": "^4.3.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-responsive": "^2.11.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1"
+  }
+}

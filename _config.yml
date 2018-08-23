@@ -38,6 +38,11 @@ sass:
   style: compressed
 markdown: kramdown
 
+collections:
+  iframes:
+    output: true
+    permalink: /:collection/:name
+
 plugins:
   - jekyll-feed
   - jekyll-gist
