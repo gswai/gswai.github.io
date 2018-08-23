@@ -11,9 +11,9 @@ permalink: /articles
         Articles
       </h1>
 
-      <div class="columns is-multiline is-gapless">
+      <div class="columns is-multiline is-mobile">
         {% for post in site.data.articles %}
-        <div class="column is-one-third">
+        <div class="column is-one-third-desktop is-half-mobile ">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by2">
@@ -30,8 +30,8 @@ permalink: /articles
                   </figure>
                 </div>
                 <div class="media-content">
-                  <a class="title is-4" href="{{ post.medium_url }}">{{ post.author }}</a> <br>
-                  <a class="subtitle is-6" href="{{ post.medium_url }}">{{ post.date | date: "%b %-d, %Y" }}</a>
+                  <a class="content" href="{{ post.medium_url }}"><strong>{{ post.author }}</strong></a> <br>
+                  <p class="content">{{ post.date | date: "%b %-d, %Y" }}</p>
                 </div>
               </div>
 
