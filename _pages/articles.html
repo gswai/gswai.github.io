@@ -18,7 +18,9 @@ permalink: /articles
             <div class="card-image">
               <figure class="image is-4by2">
                 <a href="{{ post.medium_url }}">
-                  <img src="/assets/images/posts/{{ post.image_post }}" alt="Placeholder image">
+                  <amp-img width="400" height="200" layout="intrinsic" 
+                    src="/assets/images/posts/{{ post.image_post }}" 
+                    alt="Placeholder image"></amp-img>
                 </a>
               </figure>
             </div>
@@ -26,7 +28,9 @@ permalink: /articles
               <div class="media">
                 <div class="media-left">
                   <figure class="image is-48x48">
-                    <img src="/assets/images/posts/{{ post.image_author }}" alt="Placeholder image">
+                    <amp-img width="48" height="48" layout="intrinsic" 
+                      src="/assets/images/posts/{{ post.image_author }}" 
+                      alt="Placeholder image"></amp-img>
                   </figure>
                 </div>
                 <div class="media-content">

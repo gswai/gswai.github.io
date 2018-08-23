@@ -115,15 +115,21 @@ bulma_carousel: true
       <h1 class="title has-text-centered">
         2017 Global Perks
       </h1>
-      <figure class="image ">
-        <img src="/assets/images/HelloTomorrow2.jpg">
-      </figure>
 
-    </div>
 
-    <div class="container">
-      Some SWAI participants from the top 3 winning cities & some local organizers came to the Hello Tomorrow in PARIS to live an international experience and meet advisers, investors and other Startup Weekend participants. <br>
-      <br>
+      <center>
+        <figure class="image is-center">
+          <amp-img width="600" height="400" layout="intrinsic" src="/assets/images/HelloTomorrow2.jpg"></amp-img>
+        </figure>
+      </center>
+      <div class="columns">
+        <div class="column has-text-centered is-italic">
+          Some SWAI participants from the top 3 winning cities & some local organizers came to the Hello Tomorrow in PARIS to live an international experience and meet advisers, investors and other Startup Weekend participants.
+        </div>
+      </div>
+
+
+
       👍 The City.AI team was happy to invite winning teams from all cities by giving one ticket to the global summit AI in Amsterdam 2017<br>
 
       👍 A Special Prize was attributed to the 2nd global winning team by Allianz Accelerator<br>
@@ -137,6 +143,7 @@ bulma_carousel: true
       👍 For the Five finalists receive $20K in GCP Credits. Winner gets $100K in GCP Credits.<br>
 
       👍 A fast-track call of Wayra in London for the 11 local winners. This would give them the opportunity to e-pitch in front of Telefonica Senior Executive & the Wayra team for mentoring, coaching & business development.<br>
+
 
     </div>
 
@@ -155,7 +162,8 @@ bulma_carousel: true
       <figure class="media-left">
         <p class="image is-64x64">
           <a href="{{ tweet.url }}">
-            <img src="/assets/images/tweets/{{ tweet.image_author }}">
+            <amp-img height="64" width="64" layout="fill" 
+              src="/assets/images/tweets/{{ tweet.image_author }}"></amp-img>
           </a>
         </p>
       </figure>
@@ -199,6 +207,9 @@ bulma_carousel: true
 <section class="is-large section-padding-large">
   <div class="container">
 
+    <div class="columns is-horizontal-center">
+    <div class="column is-8">
+      
   <amp-carousel class="collapsible-captions"
   height="320"
   layout="fixed-height"
@@ -221,6 +232,9 @@ bulma_carousel: true
   </figure>
   {% endfor %}
   </amp-carousel>
+
+    </div>
+    </div>
 
   </div>
 </section>

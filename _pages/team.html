@@ -19,8 +19,8 @@ permalink: /team
         <div class="column is-4-desktop is-half-mobile">
           <div class="card">
             <div class="card-image">
-              <figure class="image is-1by1">
-                <img class="is-rounded" src="{{ member.img }}" alt="{{ member.name }}">
+              <figure class="image">
+                <amp-img width="400" height="400" layout="intrinsic" src="{{ member.img }}" alt="{{ member.name }}"></amp-img>
               </figure>
             </div>
             <div class="card-content">
@@ -53,7 +53,7 @@ permalink: /team
       <article class="media">
         <figure class="media-left">
           <p class="image is-64x64">
-            <img src="{{ quote.img }}">
+            <amp-img width="64" height="64" layout="intrinsic" src="{{ quote.img }}" alt="{{ quoute.author }}"></amp-img>
           </p>
         </figure>
         <div class="media-content">
