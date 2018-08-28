@@ -2,6 +2,7 @@
 layout: default
 title: Team
 description: "Tens of volunteer organisers are helping their local communities in emerging and developed countries to embrace their inner entrepreneur, and adopt new AI technologies to reply to world challenges."
+image: /assets/images/logo_small.png
 permalink: /team
 
 ---
@@ -47,15 +48,15 @@ permalink: /team
 <section class="hero is-small" id="quotes">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title has-text-centered">
+      <h2 class="title has-text-centered">
         Quotes
-      </h1>
+      </h2>
 
       {% for quote in site.data.quotes %}
       <article class="media">
         <figure class="media-left">
           <p class="image is-64x64">
-            <amp-img width="64" height="64" layout="intrinsic" src="{{ quote.img }}" alt="{{ quoute.author }}"></amp-img>
+            <amp-img width="64" height="64" layout="intrinsic" src="{{ quote.img }}" alt="{{ quote.author }}"></amp-img>
           </p>
         </figure>
         <div class="media-content">

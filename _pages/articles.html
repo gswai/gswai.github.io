@@ -2,6 +2,7 @@
 layout: default
 title: Articles
 description: "Medium posts describing more in detail our AI initiative"
+image: /assets/images/logo_small.png
 permalink: /articles
 
 ---
@@ -22,7 +23,7 @@ permalink: /articles
                 <a href="{{ post.medium_url }}">
                   <amp-img width="400" height="200" layout="intrinsic" 
                     src="/assets/images/posts/{{ post.image_post }}" 
-                    alt="Placeholder image"></amp-img>
+                    alt="{{ post.title }}"></amp-img>
                 </a>
               </figure>
             </div>
@@ -32,7 +33,7 @@ permalink: /articles
                   <figure class="image is-48x48">
                     <amp-img width="48" height="48" layout="intrinsic" 
                       src="/assets/images/posts/{{ post.image_author }}" 
-                      alt="Placeholder image"></amp-img>
+                      alt="{{ img.author }}"></amp-img>
                   </figure>
                 </div>
                 <div class="media-content">

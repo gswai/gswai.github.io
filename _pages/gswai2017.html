@@ -2,6 +2,7 @@
 layout: default
 title: GSWAI 2017
 description: "In September 2017, during two weekends, one hundred web developers, graphic designers, business experts, engineers, researchers and students worked intensively on functional startup AI prototypes."
+image: /assets/images/HelloTomorrow2.jpg
 permalink: /gswai2017
 leaflet: true
 map_leaflet: true
@@ -17,7 +18,7 @@ bulma_carousel: true
       </h1>
       <amp-iframe height="300" sandbox="allow-scripts" layout="fixed-height" 
         src="/iframes/leaflet-gswai2017">
-         <amp-img layout="nodisplay" src="/assets/images/photos/StartupWeekend.jpg" 
+         <amp-img layout="nodisplay" alt="Global Startup Weekend AI Montreal 2017" src="/assets/images/photos/StartupWeekend.jpg" 
            placeholder></amp-img>
       </amp-iframe>
       <br>
@@ -114,14 +115,14 @@ bulma_carousel: true
 <section class="hero is-primary is-small">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title has-text-centered">
+      <h2 class="title has-text-centered">
         2017 Global Perks
-      </h1>
+      </h2>
 
 
       <center>
         <figure class="image is-center">
-          <amp-img width="600" height="400" layout="intrinsic" src="/assets/images/HelloTomorrow2.jpg"></amp-img>
+          <amp-img width="600" height="400" alt="GSWAI winners at Hello Tomorrow 2017" layout="intrinsic" src="/assets/images/HelloTomorrow2.jpg"></amp-img>
         </figure>
       </center>
       <div class="columns">
@@ -164,7 +165,7 @@ bulma_carousel: true
       <figure class="media-left">
         <p class="image is-64x64">
           <a href="{{ tweet.url }}">
-            <amp-img height="64" width="64" layout="fill" 
+            <amp-img height="64" width="64" layout="fill" alt="{{ tweet.name }}"
               src="/assets/images/tweets/{{ tweet.image_author }}"></amp-img>
           </a>
         </p>
@@ -223,7 +224,7 @@ bulma_carousel: true
   {% for photo in site.data.photos %}
   <figure>
     <div class="fixed-height-container">
-      <amp-img layout="fill"
+      <amp-img layout="fill" alt="{{ photo.title }}"
         src="/assets/images/photos/{{ photo.url }}"></amp-img>
     </div>
     <figcaption on="tap:AMP.setState({expanded: !expanded})"
