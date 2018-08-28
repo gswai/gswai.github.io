@@ -28,6 +28,7 @@
 
 
     {% include color-browser.html %}
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title> {% seo title=false %}
     {% seo %}
 </head>
 <body class="has-navbar-fixed-top">
