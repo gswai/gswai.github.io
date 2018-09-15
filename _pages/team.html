@@ -11,14 +11,14 @@ permalink: /team
   <div class="hero-body">
     <div class="container">
       <h1 class="title has-text-centered">
-        Behind the scence
+        Behind the scenes
       </h1>
 
-
-
+      <h2 class="subtitle has-text-centered">
+        Main team
+      </h2>
       <div class="columns is-multiline is-horizontal-center is-mobile">
-
-        {% for member in site.data.team %}
+        {% for member in site.data.team.main %}
         <div class="column is-4-desktop is-half-mobile">
           <div class="card">
             <div class="card-image">
@@ -38,8 +38,36 @@ permalink: /team
           </div>
         </div>
         {% endfor %}
-
       </div>
+
+
+      <h2 class="subtitle has-text-centered">
+        Ambassadors
+      </h2>
+
+      <div class="columns is-multiline is-horizontal-center is-mobile">
+        {% for member in site.data.team.ambassadors %}
+        <div class="column is-4-desktop is-half-mobile">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <amp-img width="400" height="400" layout="intrinsic" src="{{ member.img }}" alt="{{ member.name }}"></amp-img>
+              </figure>
+            </div>
+            <div class="card-content">
+
+              <div class="content">
+                <h2>{{ member.name }}</h2>
+                <a class="icon" href="{{ member.linkedin }}">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
 
     </div>
   </div>
