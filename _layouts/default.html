@@ -35,12 +35,16 @@
   
   <nav class="navbar is-fixed-top is-primary header">
     <div class="navbar-brand">
-      <div class="navbar-item">
-        <a href="/">
+        <a class="navbar-item" href="/">
           <amp-img src="/assets/images/logo_small.svg" alt="GSWAI" width="40" height="40"></amp-img>
         </a>
-      </div>
-      <a class="navbar-burger burger" on='tap:sidebar.toggle' data-target="navbarExampleTransparentExample">
+        <div class="navbar-item" >
+          <a class="button is-primary is-hidden-desktop " href="{{ page.url | prepend: site.baseurl }}">
+            {{ page.title | | truncate: 30 }}
+          </a>
+        </div>
+      <a class="navbar-burger burger" on='tap:sidebar.toggle' 
+        data-target="navbarExampleTransparentExample">
         <span></span>
         <span></span>
         <span></span>
@@ -71,7 +75,7 @@
           <a class="navbar-link">
             Media  &nbsp; <i class="fas fa-angle-down"></i>
           </a>
-          <div class="navbar-dropdown is-boxed">
+          <div class="navbar-dropdown is-boxed is-right">
             <a class="navbar-item bd-tw-button button" href="/videos">
               <i class="fab fa-youtube"></i>   Videos
             </a>
@@ -89,7 +93,7 @@
           <a class="navbar-link">
             Find us &nbsp;  <i class="fas fa-angle-down"></i>
           </a>
-          <div class="navbar-dropdown is-boxed">
+          <div class="navbar-dropdown is-boxed is-right">
             <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
               <i class="fab fa-twitter"></i>&nbsp;Twitter
             </a>
@@ -130,7 +134,7 @@
       Team
     </a>
     <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-link">
+      <a class="navbar-link" href="https://ng-tweet.herokuapp.com/">
         Media  <i class="fas fa-angle-down"></i>
       </a>
       <div class="navbar-dropdown is-boxed">
@@ -147,9 +151,6 @@
       <hr class="navbar-divider">
     </div>
     <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-link">
-        Find us  <i class="fas fa-angle-down"></i>
-      </a>
       <div class="navbar-dropdown is-boxed">
         <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
           <i class="fab fa-twitter"></i>&nbsp;Twitter
