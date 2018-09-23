@@ -22,7 +22,7 @@ bulma_carousel: true
            placeholder></amp-img>
       </amp-iframe>
       <br>
-      <nav class="level">
+      <nav class="level is-mobile">
         <div class="level-item has-text-centered">
           <div>
             <p class="heading">Weekends</p>
@@ -53,45 +53,38 @@ bulma_carousel: true
   </div>
 
   <div class="container">
-    <div class="columns">
-      <div class="column has-text-centered">
+    <div class="columns is-mobile is-multiline">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Douala, <strong>Cameroon</strong>
       </div>
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Montréal, <strong>Canada</strong>
       </div>
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Lima, <strong>Peru</strong>
       </div>
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Hong Kong, <strong>China</strong>
       </div>
-    </div>
-
-    <div class="columns">
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Guadalajara, <strong>Mexico</strong>
       </div>
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Beirut, <strong>Lebanon</strong>
       </div>
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Mexico City, <strong>Mexico</strong>
       </div>
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Carthage, <strong>Tunisia</strong>
       </div>
-    </div>
-
-
-    <div class="columns">
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Istanbul, <strong>Turkiye</strong>
       </div>
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         Paris, <strong>France</strong>
       </div>
-      <div class="column has-text-centered">
+      <div class="column is-6-mobile is-2-desktop has-text-centered">
         La Paz, <strong>Bolivia</strong>
       </div>
 
@@ -183,13 +176,13 @@ bulma_carousel: true
         <nav class="level is-mobile">
           <div class="level-left">
             {% if tweet.retweets %}
-              {{ tweet.retweets }} 
+              {{ tweet.retweets }}&nbsp;
               <a class="level-item">
                 <span class="icon is-small"><i class="fas fa-retweet"></i></span>
               </a>
             {% endif %}
             {% if tweet.likes %}
-              {{ tweet.likes }} 
+              {{ tweet.likes }}&nbsp;
               <a class="level-item">
                 <span class="icon is-small"><i class="fas fa-heart"></i></span>
               </a>
