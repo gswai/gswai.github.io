@@ -38,11 +38,6 @@
         <a class="navbar-item" href="/">
           <amp-img src="/assets/images/logo_small.svg" alt="GSWAI" width="40" height="40"></amp-img>
         </a>
-        <div class="navbar-item" >
-          <a class="button is-primary is-hidden-desktop " href="{{ page.url | prepend: site.baseurl }}">
-            {{ page.title | | truncate: 30 }}
-          </a>
-        </div>
       <a class="navbar-burger burger" on='tap:sidebar.toggle' 
         data-target="navbarExampleTransparentExample">
         <span></span>
@@ -152,14 +147,20 @@
     </div>
     <div class="navbar-item has-dropdown is-hoverable">
       <div class="navbar-dropdown is-boxed">
-        <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
-          <i class="fab fa-twitter"></i>&nbsp;Twitter
-        </a>
         <a class="navbar-item bd-tw-button button" href="{{ site.author.facebook }}">
           <i class="fab fa-facebook"></i>&nbsp;Facebook
         </a>
         <a class="navbar-item bd-tw-button button" href="{{ site.author.instagram }}">
           <i class="fab fa-instagram"></i>&nbsp;Instagram
+        </a>
+        <a class="navbar-item bd-tw-button button" href="{{ site.author.medium }}">
+          <i class="fab fa-medium"></i>&nbsp;Medium
+        </a>
+        <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
+          <i class="fab fa-twitter"></i>&nbsp;Twitter
+        </a>
+        <a class="navbar-item bd-tw-button button" href="{{ site.author.github }}">
+          <i class="fab fa-github"></i>&nbsp;Github
         </a>
       </div>
     </div>
