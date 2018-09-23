@@ -26,7 +26,8 @@ bulma_accordion: true
         <div class="level-item has-text-centered">
           <div class="dropdown is-hoverable">
             <div class="dropdown-trigger">
-              <button class="button is-text" aria-haspopup="true" aria-controls="dropdown-menu4">
+              <a class="is-text" aria-haspopup="true" 
+                aria-controls="dropdown-menu4">
                 <h3 class="has-text-warning is-hidden-touch">
                   For everybody to participate 
                   in the AI revolution
@@ -37,7 +38,7 @@ bulma_accordion: true
                 <span class="icon is-small has-text-warning">
                   <i class="fas fa-angle-down" aria-hidden="true"></i>
                 </span>
-              </button>
+              </a>
             </div>
             <div class="dropdown-menu" id="dropdown-menu4" role="menu">
               <div class="dropdown-content">
@@ -58,16 +59,17 @@ bulma_accordion: true
         <div class="level-item has-text-centered">
           <div class="dropdown is-hoverable">
             <div class="dropdown-trigger">
-              <button class="button is-text" aria-haspopup="true" aria-controls="dropdown-menu4">
+              <a class="is-text" aria-haspopup="true" aria-controls="dropdown-menu4">
                 <h3 class="has-text-warning">
                   A Plural and Open Community
                 </h3>
                 <span class="icon is-small has-text-warning">
                   <i class="fas fa-angle-down" aria-hidden="true"></i>
                 </span>
-              </button>
+              </a>
             </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-menu is-primary" id="dropdown-menu4" 
+              role="menu">
               <div class="dropdown-content">
                 <div class="dropdown-item">
                   <p class="has-text-centered"> 
@@ -83,7 +85,8 @@ bulma_accordion: true
         <div class="level-item has-text-centered">
           <div class="dropdown is-hoverable">
             <div class="dropdown-trigger">
-              <button class="button is-text" aria-haspopup="true" aria-controls="dropdown-menu4">
+              <a class="is-text" aria-haspopup="true" 
+                aria-controls="dropdown-menu4">
                 <h3 class="has-text-warning is-hidden-touch">
                   Drive for impact with Applied Artificial Intelligence
                 </h3>
@@ -93,7 +96,7 @@ bulma_accordion: true
                 <span class="icon is-small has-text-warning">
                   <i class="fas fa-angle-down" aria-hidden="true"></i>
                 </span>
-              </button>
+              </a>
             </div>
             <div class="dropdown-menu" id="dropdown-menu4" role="menu">
               <div class="dropdown-content">
@@ -122,64 +125,66 @@ bulma_accordion: true
 </section>
 
 <section class="section">
-  <div class="container" >
-    <div class="notification has-text-centered">
+  <div class="container">
       <h2 class="title has-text-centered" >
         What is Global Startup Weekend AI (GSWAI)? 
       </h2>
-      GSWAI is a global volunteer-led initiative that 
-      started in Paris in 2016 it went global in 2017 
-      to make artificial intelligence technologies more 
-      spread world wide, more diverse, inclusive, and 
-      impactful by removing barriers.  We are boosting 
-      and connecting SW communities everywhere to 
-      organize their own SWAI and empower their 
-      ecosystems to tackle AI.
+      <p class="has-text-centered">
+        GSWAI is a global volunteer-led initiative that started in Paris in 
+        2016 it went global in 2017 to make artificial intelligence 
+        technologies more spread world wide, more diverse, inclusive, and 
+        impactful by removing barriers.  We are boosting and connecting SW 
+        communities everywhere to organize their own SWAI and empower their 
+        ecosystems to tackle AI.
+      </p>
+      <p class="has-text-centered">
+        Tens of volunteer organisers are helping their local communities in 
+        emerging and developed countries to embrace their inner entrepreneur, 
+        and adopt new AI technologies to reply to world challenges.
+      </p>
       <br>
-      Tens of volunteer organisers are helping their local communities in 
-      emerging and developed countries to embrace their inner entrepreneur, and 
-      adopt new AI technologies to reply to world challenges.  <br>
+      <div class="columns is-horizontal-center">
+        <div class="column is-8-desktop is-12-mobile">
+          <div class="video-player">
+            <amp-video id="myVideo"
+              controls
+              width="1280"
+              height="720"
+              poster="/assets/images/photos/StartupWeekend.jpg"
+              layout="responsive"
+              src="https://globalswai.co/assets/videos/SWAIMontreal.mp4">
+            </amp-video>
+            <div id="myOverlay"
+              class="click-to-play-overlay">
 
+              <h3 class="video-title">SWAI Montreal 2017</h3>
 
-
-      <div class="video-player">
-
-        <amp-video id="myVideo"
-          controls
-          width="1280"
-          height="720"
-          poster="/assets/images/photos/StartupWeekend.jpg"
-          layout="responsive"
-          src="https://globalswai.co/assets/videos/SWAIMontreal.mp4">
-        </amp-video>
-
-        <div id="myOverlay"
-          class="click-to-play-overlay">
-
-          <h3 class="video-title">SWAI Montreal 2017</h3>
-
-          <div class="play-icon"
-            role="button"
-            tabindex="0"
-            on="tap:myOverlay.hide, myVideo.play"></div>
-
-          <amp-img class="poster-image" src="/assets/images/photos/StartupWeekend.jpg" height="100" width="300" layout="fill" alt="Startup Weekend AI Montreal 2017"></amp-img>
+              <div class="play-icon"
+                role="button"
+                tabindex="0"
+                on="tap:myOverlay.hide, myVideo.play"></div>
+              <amp-img class="poster-image" 
+                src="/assets/images/photos/StartupWeekend.jpg" height="100" 
+                width="300" layout="fill" alt="Startup Weekend AI Montreal 
+                2017"></amp-img>
+            </div>
+          </div>
         </div>
-
       </div>
-
 
       <div class="container">
-        <h3 class="is-size-5">GSWAI in Numbers</h3>
-        More than 1000 entrepreneurs & researchers will come together over 2 weekends in more than 10 cities where local Startup Weekend AI are organised.<br>
-        Several Workshops, challenges and expert content will be shared with the 
-        global community over 1 month previous to GSWAI 10 global mentors from 
-        world leading organisations in AI, machine learning, data 3 winning teams 
+        <h3 class="is-size-5 has-text-centered">GSWAI in Numbers</h3>
+        <p class="has-text-centered">
+          More than 1000 entrepreneurs & researchers will come together over 2 
+          weekends in more than 10 cities where local Startup Weekend AI are 
+          organised.<br>
+          Several Workshops, challenges and expert content will be shared with the 
+          global community over 1 month previous to GSWAI 10 global mentors from 
+          world leading organisations in AI, machine learning, data 3 winning 
+          teams 
+        </p>
       </div>
-    </div>
   </div>
-
-
 </section>
 
 
