@@ -4,7 +4,7 @@ permalink: /
 image: /assets/images/logo_small.png
 leaflet: true
 map_leaflet_landing: true
-bulma_accordion: true
+bulma_carousel: true
 
 ---
 <section class="hero is-primary is-small">
@@ -328,7 +328,9 @@ bulma_accordion: true
       <div class="column is-4-desktop is-6-mobile">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/forget_boundaries.svg" alt="GSWAI forget boundaries" height="128" width="128" layout="responsive"> </amp-img>
+            <amp-img src="/assets/images/whyinvolve/forget_boundaries_anim.svg" 
+              alt="GSWAI forget boundaries" height="128" width="128" 
+              layout="responsive"> </amp-img>
           </figure>
         </div>
         <div class="content">
@@ -338,7 +340,7 @@ bulma_accordion: true
       <div class="column is-4-desktop is-6-mobile">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/bridge_gap.svg" alt="GSWAI bridge gap between AI research and business" height="128" width="128" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/whyinvolve/bridge_gap2.svg" alt="GSWAI bridge gap between AI research and business" height="128" width="128" layout="responsive"></amp-img>
           </figure>
         </div>
         <div class="content">
@@ -349,7 +351,9 @@ bulma_accordion: true
       <div class="column is-4-desktop is-6-mobile">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/get_resources.svg" alt="GSWAI get connections" height="128" width="128" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/whyinvolve/get_resources_anim.svg" 
+              alt="GSWAI get connections" height="128" width="128" 
+              layout="responsive"></amp-img>
           </figure>
         </div>
         <div class="content">
@@ -360,7 +364,9 @@ bulma_accordion: true
       <div class="column is-4-desktop is-6-mobile">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/test_ideas.svg" alt="GSWAI test ideas" height="128" width="128" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/whyinvolve/test_ideas_anim.svg" 
+              alt="GSWAI test ideas" height="128" width="128" 
+              layout="responsive"></amp-img>
           </figure>
         </div>
         <div class="content">
@@ -370,7 +376,9 @@ bulma_accordion: true
       <div class="column is-4-desktop is-6-mobile">
         <div class='card-content is-flex is-horizontal-center'>
           <figure class="image is-128x128">
-            <amp-img src="/assets/images/whyinvolve/exclusive_prices.svg" alt="GSWAI get exclusive prizes and perks" height="128" width="128" layout="responsive"></amp-img>
+            <amp-img src="/assets/images/whyinvolve/exclusive_prices_anim.svg" 
+              alt="GSWAI get exclusive prizes and perks" height="128" 
+              width="128" layout="responsive"></amp-img>
           </figure>
         </div>
         <div class="content">
@@ -388,39 +396,58 @@ bulma_accordion: true
       <h2 class="title has-text-centered">
         <a href="{{ "/articles" | prepend: site.baseurl }}" target="_blank">LAST ARTICLES</a>
       </h2>
-      <div class="columns">
-        {% for post in site.data.articles limit:3 offset:0 %}
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by2">
-                <a href="{{ post.medium_url }}">
-                  <amp-img src="/assets/images/posts/{{ post.image_post }}" alt="{{ post.title }}"  height="2.0" width="4.0" layout="responsive"></amp-img>
-                </a>
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <amp-img src="/assets/images/posts/{{ post.image_author }}" alt="{{ post.author }}" height="48" width="48" layout="responsive"></amp-img>
-                  </figure>
-                </div>
-                <div class="media-content">
-                  <a class="content" href="{{ post.medium_url }}"><strong>{{ post.author }}</strong></a> <br>
-                  <p class="content">{{ post.date | date: "%b %-d, %Y" }}</p>
-                </div>
-              </div>
 
-              <div class="content">
-                {{ post.title }}
-                <br>
+      <amp-carousel id="carousel-with-preview"
+        height="320"
+        layout="fixed-height"
+        controls
+        loop
+        autoplay
+        delay="1000"
+        type="carousel">
+
+
+        {% for post in site.data.articles %}
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <a href="{{ post.medium_url }}">
+                <amp-img src="/assets/images/posts/{{ post.image_post }}" 
+                  alt="{{ post.title }}"  height="200" width="300" 
+                  layout="intrinsic"></amp-img>
+              </a>
+            </figure>
+          </div>
+          <div class="card-content is-4">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <amp-img src="/assets/images/posts/{{ post.image_author }}" alt="{{ post.author }}" height="48" width="48" layout="responsive"></amp-img>
+                </figure>
+              </div>
+              <div class="media-content">
+                <a class="content" href="{{ post.medium_url }}"><strong>{{ post.author }}</strong></a> <br>
+                <p class="content">{{ post.date | date: "%b %-d, %Y" }}</p>
               </div>
             </div>
+
+            {{ post.title | truncate:40 }}
+
           </div>
         </div>
         {% endfor %}
+      </amp-carousel>
+
+      <!--
+      <div class="carousel-preview">
+        {% for post in site.data.articles %}
+        <a on="tap:carousel-with-preview.goToSlide(index={{ forloop.index }})" target="_blank">
+          <i class="fas fa-circle"></i>
+        </a>
+        {% endfor %}
       </div>
+      -->
+
     </div>
   </div>
 </section>
