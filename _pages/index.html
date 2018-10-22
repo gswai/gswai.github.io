@@ -9,11 +9,6 @@ bulma_carousel: true
 ---
 <section class="hero is-primary is-small">
   <div class="hero-body has-bg-img">
-    <div class="container is-fullhd">
-      <amp-iframe height="300" sandbox="allow-scripts" layout="fixed-height" src="/iframes/leaflet-landing">
-         <amp-img layout="nodisplay" src="/assets/images/photos/StartupWeekend.jpg" alt="Statup Weekend AI Montreal 2017" placeholder></amp-img>
-      </amp-iframe>
-    </div>
     <div class="container">
       <h1 class="title has-text-centered">
         Global Startup Weekend Artificial Intelligence 
@@ -21,107 +16,80 @@ bulma_carousel: true
       <h2 class="subtitle has-text-centered">
         <strong> The future is NOW, let’s build it together! </strong>
       </h2>
-      <nav class="level">
-        <div class="level-item has-text-centered">
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <a class="is-text" aria-haspopup="true" 
-                aria-controls="dropdown-menu4">
-                <h3 class="has-text-warning is-hidden-touch">
-                  For everybody to participate 
-                  in the AI revolution
-                </h3>
-                <h3 class="has-text-warning is-hidden-desktop">
-                  Everybody in the AI revolution
-                </h3>
-                <span class="icon is-small has-text-warning">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-item">
-                  <p class="has-text-centered"> 
-                    Every country has the right to participate in this global “revolution”, 
-                    get access to tools to prepare and reap the benefits of job creation, 
-                    innovation, and economic growth...  however, too many places are 
-                    currently excluded from this revolution.
-                    We created Global Startup Weekend AI (GSWAI), a volunteer-based initiative, with Techstars,to invite more people and organisations to join this growing global community that seeks to tackle today’s challenges with technology to better understand and answer to them.
-                    We leave no one behind!  
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <a class="is-text" aria-haspopup="true" aria-controls="dropdown-menu4">
-                <h3 class="has-text-warning">
-                  A Plural and Open Community
-                </h3>
-                <span class="icon is-small has-text-warning">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </div>
-            <div class="dropdown-menu is-primary" id="dropdown-menu4" 
-              role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-item">
-                  <p class="has-text-centered"> 
-                    Startup Weekend Artificial Intelligence is a way for anyone, anywhere 
-                    to start their journeys and empower, not only their startup ecosystems, 
-                    but themselves.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <a class="is-text" aria-haspopup="true" 
-                aria-controls="dropdown-menu4">
-                <h3 class="has-text-warning is-hidden-touch">
-                  Drive for impact with Applied Artificial Intelligence
-                </h3>
-                <h3 class="has-text-warning is-hidden-desktop">
-                  Drive for impact with Applied AI
-                </h3>
-                <span class="icon is-small has-text-warning">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-item">
-                  <p class="has-text-centered"> 
-                    We need to be bold and progress not only in AI, but in society, using 
-                    technology as a tool to bring us closer, move us forward faster, but 
-                    more responsible. Progress cannot be made in isolation, so we thrive to 
-                    bring as many regions as possible together, to build the future we ALL 
-                    want to live in.
 
-                    This is why at GSWAI we believe that communities around the world need to locally engage their ecosystems, to educate on them on the theme, in order to democratize the AI concept and push them out of their comfort zone to build the better tomorrow we all want to live in.
-                    This global initiative is more than a simultaneous event in several cities 
-                    around the world: it is federating a genuine community around artificial 
-                    intelligence, democratising its use, and making it more diverse, inclusive and 
-                    impactful by removing boundaries.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+
     </div>
   </div>
+  <div class="hero-foot is-transparerent">
+    <nav class="tabs is-boxed is-centered">
+      <div class="container">
+        <ul>
+          <li>
+            <a on="tap:map-container.toggleVisibility">Map</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </section>
+
+
+  <div class="container is-fullhd" id="map-container">
+
+      <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+      <script src="assets/js/datamaps.world.min.js"></script>
+      <div id="basic_choropleth" style="position: relative; width: 500px; height: 300px;"></div>
+      <script>
+        var basic_choropleth = new Datamap({
+          element: document.getElementById("basic_choropleth"),
+          projection: 'mercator',
+          fills: {
+            defaultFill: "#eaeae5",
+            authorHasTraveledTo: "#dddd27"
+          },
+          geographyConfig: {
+            popupTemplate: function(geography, data) {
+              return `<div class="hoverinfo"> Startup Weekend AI 2018 <br> ${geography.properties.name}, ${data.city} </div> <amp-img src="/assets/images/getinvolved/organize.svg" alt="GSWAI Organize" height="128" width="128" layout="responsive"></amp-img>`
+            },
+            highlightBorderWidth: 3
+          },
+          data: {
+            CAN: { fillKey: "authorHasTraveledTo", city: "Montreal" },
+            COL: { fillKey: "authorHasTraveledTo", city: "Bucaramanga" },
+            ECU: { fillKey: "authorHasTraveledTo", city: "Guayaquil" },
+            BOL: { fillKey: "authorHasTraveledTo", city: "La Paz" },
+            PER: { fillKey: "authorHasTraveledTo", city: "Lima" },
+            POL: { fillKey: "authorHasTraveledTo", city: "Szczecin" },
+            BEL: { fillKey: "authorHasTraveledTo", city: "Bruxelles" },
+            FRA: { fillKey: "authorHasTraveledTo", city: "Paris" },
+            TUR: { fillKey: "authorHasTraveledTo", city: "Istanbul" },
+            CMR: { fillKey: "authorHasTraveledTo", city: "Yaoundé" },
+            MDG: { fillKey: "authorHasTraveledTo", city: "Antananarivo" },
+            SAU: { fillKey: "authorHasTraveledTo", city: "Jeddah" },
+            ARE: { fillKey: "authorHasTraveledTo", city: "Dubai" },
+            CHN: { fillKey: "authorHasTraveledTo", city: "Hong Kong" },
+            TWN: { fillKey: "authorHasTraveledTo", city: "Taipei" },
+            AUS: { fillKey: "authorHasTraveledTo", city: "Sydney" },
+          }
+        });
+        basic_choropleth.bubbles([
+          {name: 'Bubble 1', latitude: 21.32, longitude: -7.32, radius: 25, fillKey: 'authorHasTraveledTo'},
+          {name: 'Bubble 4', latitude: -31.32, longitude: 23.32, radius: 35, fillKey: 'authorHasTraveledTo'},
+        ], {
+          popupTemplate: function(geo, data) {
+            return "<div class='hoverinfo'>Bubble for " + data.name + "";
+          }
+        });
+      </script>
+
+
+
+
+    <amp-iframe height="300" sandbox="allow-scripts" layout="fixed-height" src="/iframes/leaflet-landing">
+      <amp-img layout="nodisplay" src="/assets/images/photos/StartupWeekend.jpg" alt="Statup Weekend AI Montreal 2017" placeholder></amp-img>
+    </amp-iframe>
+  </div>
 
 <section class="section">
   <div class="container">
