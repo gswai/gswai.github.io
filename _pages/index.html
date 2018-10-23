@@ -10,26 +10,19 @@ bulma_carousel: true
 <section class="hero is-primary is-small">
   <div class="hero-body has-bg-img">
     <div class="container">
+      <center>
+      <amp-img src="/assets/images/logo_small.svg" alt="GSWAI Logo" height="256" width="128" layout="intrinsic"></amp-img>
+      </center>
       <h1 class="title has-text-centered">
         Global Startup Weekend Artificial Intelligence 
       </h1>
       <h2 class="subtitle has-text-centered">
-        <strong> The future is NOW, let’s build it together! </strong>
+        The future is NOW, let’s build it together!
       </h2>
 
+      <a on="tap:map-container.toggleVisibility" class="button is-warning">Map</a>
 
     </div>
-  </div>
-  <div class="hero-foot is-transparerent">
-    <nav class="tabs is-boxed is-centered">
-      <div class="container">
-        <ul>
-          <li>
-            <a on="tap:map-container.toggleVisibility">Map</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
   </div>
 </section>
 
@@ -39,18 +32,19 @@ bulma_carousel: true
       <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
       <script src="assets/js/datamaps.world.min.js"></script>
-      <div id="basic_choropleth" style="position: relative; width: 500px; height: 300px;"></div>
+      <div id="basic_choropleth" style="width: 100%; height: 300px;"></div>
       <script>
         var basic_choropleth = new Datamap({
           element: document.getElementById("basic_choropleth"),
           projection: 'mercator',
+          responsive: true,
           fills: {
             defaultFill: "#eaeae5",
-            authorHasTraveledTo: "#dddd27"
+            authorHasTraveledTo: "#edbb1e"
           },
           geographyConfig: {
             popupTemplate: function(geography, data) {
-              return `<div class="hoverinfo"> Startup Weekend AI 2018 <br> ${geography.properties.name}, ${data.city} </div> <amp-img src="/assets/images/getinvolved/organize.svg" alt="GSWAI Organize" height="128" width="128" layout="responsive"></amp-img>`
+              return `<amp-img src="/assets/images/getinvolved/organize.svg" alt="GSWAI Organize" height="128" width="128" layout="responsive"></amp-img> <div class="hoverinfo"> <strong>Startup Weekend AI 2018</strong> <br> ${geography.properties.name}, ${data.city} </div>`
             },
             highlightBorderWidth: 3
           },
@@ -73,13 +67,9 @@ bulma_carousel: true
             AUS: { fillKey: "authorHasTraveledTo", city: "Sydney" },
           }
         });
-        basic_choropleth.bubbles([
-          {name: 'Bubble 1', latitude: 21.32, longitude: -7.32, radius: 25, fillKey: 'authorHasTraveledTo'},
-          {name: 'Bubble 4', latitude: -31.32, longitude: 23.32, radius: 35, fillKey: 'authorHasTraveledTo'},
-        ], {
-          popupTemplate: function(geo, data) {
-            return "<div class='hoverinfo'>Bubble for " + data.name + "";
-          }
+        // Pure JavaScript
+        window.addEventListener('resize', function() {
+          basic_choropleth.resize();
         });
       </script>
 
