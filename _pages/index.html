@@ -44,22 +44,8 @@ bulma_carousel: false
       <h2 class="title has-text-centered" >
         What is Global Startup Weekend AI (GSWAI)? 
       </h2>
-      <p class="has-text-centered">
-        GSWAI is a global volunteer-led initiative that started in Paris in 
-        2016 it went global in 2017 to make artificial intelligence 
-        technologies more spread world wide, more diverse, inclusive, and 
-        impactful by removing barriers.  We are boosting and connecting SW 
-        communities everywhere to organize their own SWAI and empower their 
-        ecosystems to tackle AI.
-      </p>
-      <p class="has-text-centered">
-        Tens of volunteer organisers are helping their local communities in 
-        emerging and developed countries to embrace their inner entrepreneur, 
-        and adopt new AI technologies to reply to world challenges.
-      </p>
-      <br>
       <div class="columns is-horizontal-center">
-        <div class="column is-8-desktop is-12-mobile">
+        <div class="column is-7-desktop is-12-mobile">
           <div class="video-player">
             <amp-video id="myVideo"
               controls
@@ -85,9 +71,29 @@ bulma_carousel: false
             </div>
           </div>
         </div>
+        <div class="column">
+      <p class="has-text-centered">
+        GSWAI is a global volunteer-led initiative that started in Paris in 
+        2016 it went global in 2017 to make artificial intelligence 
+        technologies more spread world wide, more diverse, inclusive, and 
+        impactful by removing barriers.  We are boosting and connecting SW 
+        communities everywhere to organize their own SWAI and empower their 
+        ecosystems to tackle AI.
+      </p>
+      <p class="has-text-centered">
+        Tens of volunteer organisers are helping their local communities in 
+        emerging and developed countries to embrace their inner entrepreneur, 
+        and adopt new AI technologies to reply to world challenges.
+      </p>
+      <br>
+      <div id="readmore-button">
+        <center>
+          <button on="tap:readmore-button.hide, readmore-text.toggleVisibility" 
+            class="button is-warning">Read more </button>
+        </center>
       </div>
-
-      <div class="container">
+      <br>
+      <div id="readmore-text" hidden="">
         <h3 class="is-size-5 has-text-centered">GSWAI in Numbers</h3>
         <p class="has-text-centered">
           More than 1000 entrepreneurs & researchers will come together over 2 
@@ -99,11 +105,14 @@ bulma_carousel: false
           teams 
         </p>
       </div>
+        </div>
+      </div>
+
   </div>
 </section>
 
 
-<section class="hero is-small is-primary">
+<section class="hero is-small is-warning">
   <div class="hero-body" id="about">
     <div class="container">
 
@@ -116,106 +125,98 @@ bulma_carousel: false
       </h3>
       <div class="columns is-mobile is-multiline is-horizontal-center">
 
-        <div class="column is-4-desktop is-12-mobile">
+        <div id="organize_icon" class="column is-4-desktop is-12-mobile">
           <div class='card-content is-flex is-horizontal-center'>
             <figure class="image is-128x128">
               <amp-img src="/assets/images/getinvolved/organize.svg" alt="GSWAI Organize" height="128" width="128" layout="responsive"></amp-img>
             </figure>
           </div>
 
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu1">
-                <p>Organize a Startup Weekend AI (#SWAI)</p>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu1" role="menu">
-              <div class="dropdown-content">
-                <p class="dropdown-item">
-                  On the weekends of Global Startup Weekend AI end of 2018, 
-                  organize a Startup Weekend Artificial Intelligence in your 
-                  community!  Startup Weekend is a 54-hour event designed to 
-                  provide superior experiential education for technical and 
-                  non-technical entrepreneurs, students and everybody 
-                  interested in the entrepreneurial experience. The weekend 
-                  event is centered on action, innovation, and education.  
-                  Beginning on Friday night with an idea pitching session and 
-                  continuing throughout the weekend with testing, business 
-                  model development, and basic prototype creation, Startup 
-                  Weekend culminates on Sunday night with demo pitching in 
-                  front of a panel of potential investors and local 
-                  entrepreneurs.  Participants are challenged with building 
-                  functional startups during the event and are able to 
-                  collaborate with like-minded individuals.
-                </p>
-              </div>
-            </div>
-          </div>
+          <button on="tap:organize_text.toggleVisibility, attend_icon.toggleVisibility, partner_icon.toggleVisibility"  
+            class="button is-primary is-inverted is-outlined" aria-haspopup="true" 
+            aria-controls="dropdown-menu1">
+            <p class="has-text-primary">Organize a Startup Weekend AI (#SWAI)</p>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div id="organize_text" class="column is-4-desktop is-12-mobile" hidden="">
+          <p>
+            On the weekends of Global Startup Weekend AI end of 2018, 
+            organize a Startup Weekend Artificial Intelligence in your 
+            community!  Startup Weekend is a 54-hour event designed to 
+            provide superior experiential education for technical and 
+            non-technical entrepreneurs, students and everybody 
+            interested in the entrepreneurial experience. The weekend 
+            event is centered on action, innovation, and education.  
+            Beginning on Friday night with an idea pitching session and 
+            continuing throughout the weekend with testing, business 
+            model development, and basic prototype creation, Startup 
+            Weekend culminates on Sunday night with demo pitching in 
+            front of a panel of potential investors and local 
+            entrepreneurs.  Participants are challenged with building 
+            functional startups during the event and are able to 
+            collaborate with like-minded individuals.
+          </p>
         </div>
 
 
-        <div class="column is-4-desktop is-6-mobile">
+        <div id="attend_icon" class="column is-4-desktop is-12-mobile 
+          has-text-centered">
           <div class='card-content is-flex is-horizontal-center'>
             <figure class="image is-128x128">
               <amp-img src="/assets/images/getinvolved/attend.svg" alt="GSWAI attend" height="128" width="128" layout="responsive"></amp-img>
             </figure>
           </div>
 
-
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu2">
-                <p>Attend</p>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu2" role="menu">
-              <div class="dropdown-content">
-                <p class="dropdown-item">
-                  Make your idea a reality. Join thousands of entrepreneurs around 
-                  the world for the most exciting two weekends of the year and 
-                  connect with the most qualified global mentors. <br> Get access to 
-                  resources and connections such as pre-event workshops, remote 
-                  mentoring, and live sessions with global communities during the 
-                  weekend!
-                </p>
-              </div>
-            </div>
-          </div>
+          <button on="tap:attend_text.toggleVisibility, 
+            organize_icon.toggleVisibility, partner_icon.toggleVisibility" 
+            class="button is-primary is-inverted is-outlined" aria-haspopup="true" 
+            aria-controls="dropdown-menu2">
+            <p class="has-text-primary">Attend</p>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div id="attend_text" class="column is-4-desktop is-12-mobile" 
+          hidden="">
+          <p>
+            Make your idea a reality. Join thousands of entrepreneurs around 
+            the world for the most exciting two weekends of the year and 
+            connect with the most qualified global mentors. <br> Get access to 
+            resources and connections such as pre-event workshops, remote 
+            mentoring, and live sessions with global communities during the 
+            weekend!
+          </p>
         </div>
 
-        <div class="column is-4-desktop is-6-mobile">
+        <div id="partner_icon" class="column is-4-desktop is-6-mobile 
+          has-text-centered">
           <div class='card-content is-flex is-horizontal-center'>
             <figure class="image is-128x128">
               <amp-img src="/assets/images/getinvolved/partner.svg" alt="GSWAI partner" height="128" width="128" layout="responsive"></amp-img>
             </figure>
           </div>
 
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-partner">
-                <p>Partner UP</p>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-partner" role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-item">
-                  Want to help support startups locally, regionally or globally? <br>
-                  <p class="has-text-centered">
-                    <a class="button is-link" href="mailto:{{ site.author.email }}">Let's talk</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <button on="tap:partner_text.toggleVisibility, 
+            organize_icon.toggleVisibility, attend_icon.toggleVisibility"
+            class="button is-primary is-inverted is-outlined" aria-haspopup="true" 
+            aria-controls="dropdown-partner">
+            <p class="has-text-primary">Partner UP</p>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div id="partner_text" class="column is-4-desktop is-6-mobile" 
+          hidden="">
+          Want to help support startups locally, regionally or 
+          globally? <br>
+          <p class="has-text-centered">
+            <a class="button is-link" href="mailto:{{ site.author.email }}">Let's talk</a>
+          </p>
         </div>
 
       </div>
