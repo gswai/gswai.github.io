@@ -1,0 +1,53 @@
+---
+layout: iframe
+leaflet: false
+map_leaflet_landing: false
+sitemap: false
+
+---
+
+<script src="/assets/js/d3.min.js"></script>
+<script src="/assets/js/topojson.min.js"></script>
+<script src="/assets/js/datamaps.world.min.js"></script>
+<div id="basic_choropleth" style="width: 100%; height: 100px;"></div>
+<script>
+  var basic_choropleth = new Datamap({
+    element: document.getElementById("basic_choropleth"),
+    projection: 'mercator',
+    responsive: true,
+    fills: {
+      defaultFill: "#eaeae5",
+      authorHasTraveledTo: "#edbb1e"
+    },
+    geographyConfig: {
+      popupTemplate: function(geography, data) {
+        return `<img src="/assets/images/logo_map.svg" alt="GSWAI Organize" height="64" width="64"></img> 
+              <div class="hoverinfo"> <strong>Startup Weekend AI 2018</strong> 
+              <br> ${geography.properties.name}, ${data.city} </div>`
+      },
+      highlightBorderWidth: 3
+    },
+    data: {
+      CAN: { fillKey: "authorHasTraveledTo", city: "Montreal" },
+      COL: { fillKey: "authorHasTraveledTo", city: "Bucaramanga" },
+      ECU: { fillKey: "authorHasTraveledTo", city: "Guayaquil" },
+      BOL: { fillKey: "authorHasTraveledTo", city: "La Paz" },
+      PER: { fillKey: "authorHasTraveledTo", city: "Lima" },
+      POL: { fillKey: "authorHasTraveledTo", city: "Szczecin" },
+      BEL: { fillKey: "authorHasTraveledTo", city: "Bruxelles" },
+      FRA: { fillKey: "authorHasTraveledTo", city: "Paris" },
+      TUR: { fillKey: "authorHasTraveledTo", city: "Istanbul" },
+      CMR: { fillKey: "authorHasTraveledTo", city: "Yaoundé" },
+      MDG: { fillKey: "authorHasTraveledTo", city: "Antananarivo" },
+      SAU: { fillKey: "authorHasTraveledTo", city: "Jeddah" },
+      ARE: { fillKey: "authorHasTraveledTo", city: "Dubai" },
+      CHN: { fillKey: "authorHasTraveledTo", city: "Hong Kong" },
+      TWN: { fillKey: "authorHasTraveledTo", city: "Taipei" },
+      AUS: { fillKey: "authorHasTraveledTo", city: "Sydney" },
+    }
+  });
+// Pure JavaScript
+window.addEventListener('resize', function() {
+  basic_choropleth.resize();
+});
+</script>

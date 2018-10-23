@@ -2,126 +2,42 @@
 layout: default
 permalink: /
 image: /assets/images/logo_small.png
-leaflet: true
-map_leaflet_landing: true
-bulma_carousel: true
+leaflet: false
+map_leaflet_landing: false
+bulma_carousel: false
 
 ---
 <section class="hero is-primary is-small">
   <div class="hero-body has-bg-img">
-    <div class="container is-fullhd">
-      <amp-iframe height="300" sandbox="allow-scripts" layout="fixed-height" src="/iframes/leaflet-landing">
-         <amp-img layout="nodisplay" src="/assets/images/photos/StartupWeekend.jpg" alt="Statup Weekend AI Montreal 2017" placeholder></amp-img>
-      </amp-iframe>
-    </div>
     <div class="container">
+      <center>
+      <amp-img src="/assets/images/logo_small.svg" alt="GSWAI Logo" height="152" width="128" layout="intrinsic"></amp-img>
+      </center>
       <h1 class="title has-text-centered">
         Global Startup Weekend Artificial Intelligence 
       </h1>
       <h2 class="subtitle has-text-centered">
-        <strong> The future is NOW, let’s build it together! </strong>
+        The future is NOW, let’s build it together!
       </h2>
-      <nav class="level">
-        <div class="level-item has-text-centered">
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <a class="is-text" aria-haspopup="true" 
-                aria-controls="dropdown-menu4">
-                <h3 class="has-text-warning is-hidden-touch">
-                  For everybody to participate 
-                  in the AI revolution
-                </h3>
-                <h3 class="has-text-warning is-hidden-desktop">
-                  Everybody in the AI revolution
-                </h3>
-                <span class="icon is-small has-text-warning">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-item">
-                  <p class="has-text-centered"> 
-                    Every country has the right to participate in this global “revolution”, 
-                    get access to tools to prepare and reap the benefits of job creation, 
-                    innovation, and economic growth...  however, too many places are 
-                    currently excluded from this revolution.
-                    We created Global Startup Weekend AI (GSWAI), a volunteer-based initiative, with Techstars,to invite more people and organisations to join this growing global community that seeks to tackle today’s challenges with technology to better understand and answer to them.
-                    We leave no one behind!  
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <a class="is-text" aria-haspopup="true" aria-controls="dropdown-menu4">
-                <h3 class="has-text-warning">
-                  A Plural and Open Community
-                </h3>
-                <span class="icon is-small has-text-warning">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </div>
-            <div class="dropdown-menu is-primary" id="dropdown-menu4" 
-              role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-item">
-                  <p class="has-text-centered"> 
-                    Startup Weekend Artificial Intelligence is a way for anyone, anywhere 
-                    to start their journeys and empower, not only their startup ecosystems, 
-                    but themselves.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <a class="is-text" aria-haspopup="true" 
-                aria-controls="dropdown-menu4">
-                <h3 class="has-text-warning is-hidden-touch">
-                  Drive for impact with Applied Artificial Intelligence
-                </h3>
-                <h3 class="has-text-warning is-hidden-desktop">
-                  Drive for impact with Applied AI
-                </h3>
-                <span class="icon is-small has-text-warning">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-item">
-                  <p class="has-text-centered"> 
-                    We need to be bold and progress not only in AI, but in society, using 
-                    technology as a tool to bring us closer, move us forward faster, but 
-                    more responsible. Progress cannot be made in isolation, so we thrive to 
-                    bring as many regions as possible together, to build the future we ALL 
-                    want to live in.
 
-                    This is why at GSWAI we believe that communities around the world need to locally engage their ecosystems, to educate on them on the theme, in order to democratize the AI concept and push them out of their comfort zone to build the better tomorrow we all want to live in.
-                    This global initiative is more than a simultaneous event in several cities 
-                    around the world: it is federating a genuine community around artificial 
-                    intelligence, democratising its use, and making it more diverse, inclusive and 
-                    impactful by removing boundaries.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <center>
+        <a on="tap:map-container.toggleVisibility" class="button is-primary is-inverted is-outlined">MAP &nbsp;<i class="fas fa-angle-down" aria-hidden="true"></i></a>
+      </center>
+
     </div>
   </div>
 </section>
+
+
+<div class="container is-fullhd" id="map-container" hidden="">
+  <div class="columns is-horizontal-center">
+    <div class="column is-8-desktop is-12-mobile">
+      <amp-iframe height="70" width="100" sandbox="allow-scripts" layout="responsive" src="/iframes/map-landing">
+        <amp-img layout="nodisplay" src="/assets/images/photos/StartupWeekend.jpg" alt="Statup Weekend AI Montreal 2017" placeholder></amp-img>
+      </amp-iframe>
+    </div>
+  </div>
+</div>
 
 <section class="section">
   <div class="container">
