@@ -1,5 +1,5 @@
 title: Global Startup Weekend on Artificial Intelligence
-description: "Global Startup Weekend on Artificial Intelligence (GSWAI) is an international initiative to help communities educate on AI, democratize it and push them out of their comfort zone to build the better tomorrow in 54 hours"
+description: "GSWAI is an international initiative to help communities educate on AI, democratize it and push them out of their comfort zone to build the better tomorrow in 54 hours"
 baseurl: ""
 url: "https://globalswai.co"
 download: ""
@@ -12,7 +12,7 @@ social:
     - https://github.com/gswai
     - https://www.instagram.com/global_swai
 author:
-  name: Global SWAI 
+  name: Global Startup Weekend AI
   image: /assets/logo_small.png
   github: https://github.com/gswai
   facebook: https://www.facebook.com/GlobalSWAI

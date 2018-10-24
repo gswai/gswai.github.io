@@ -22,8 +22,13 @@ center; background-size:cover;  opacity: 1.00; filter: alpha(opacity=1.00); }
 $darkblue: #13123d;
 $darkblue-invert: #ffffff;
 
+
 $primary: $darkblue;
 $primary-invert: $darkblue-invert;
+
+$myyellow: #edbb1e;
+$warning: $myyellow;
+$warning-invert: $darkblue;
 
 #mapid_landing {
     z-index: 1;

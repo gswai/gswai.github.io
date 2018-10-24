@@ -172,69 +172,88 @@
     <div class="content">
 
 
-      <div class="columns">
-        <div class="column">
+      <div class="columns is-mobile is-multiline">
+        <div class="column is-3-desktop is-6-mobile">
           <aside class="menu">
-          <p class="menu-label">
-            <a href="/">Global SWAI</a>
-          </p>
-          <ul class="menu-list no-bullets">
-            <li><a href="/#about">Get involved</a></li>
-            <li><a href="/gswai2017">GSWAI 2017</a></li>
-            <li><a href="/team">Team</a>
-            <li><a href="/articles">Media <i class="fas fa-angle-down"></i></a>
-              <ul>
-                <li><a href="/videos"><i class="fab fa-youtube"></i> Videos</a></li>
-                <li><a href="/articles"><i class="fab fa-medium"></i> Articles</a></li>
-                <li><a href="https://ng-tweet.herokuapp.com/"><i class="fab fa-twitter"></i> Tweet wall</a></li>
-              </ul>
-            </li>
-          </ul>
+            <a href="/" class="menu-label">
+              Global Startup Weekend AI
+            </a>
+            <ul class="menu-list">
+              <li><a href="/#about">Get involved</a></li>
+              <li><a href="/#sponsors">Sponsors</a></li>
+            </ul>
           </aside>
+
         </div>
-        <div class="column">
+        <div class="column is-2-desktop is-6-mobile">
+          <aside class="menu">
+            <a href="/gswai2017" class="menu-label">
+              GSWAI 2017
+            </a>
+            <ul class="menu-list">
+              <li><a href="/gswai2017#perks">Perks</a></li>
+              <li><a href="/gswai2017#say">What they say</a></li>
+            </ul>
+          </aside>
+
+        </div>
+        <div class="column is-3-desktop is-6-mobile">
+          <aside class="menu">
+            <a href="/team" class="menu-label">
+              Team
+            </a>
+            <ul class="menu-list">
+              <li><a href="/team#behind">Behind the scenes</a></li>
+              <li><a href="/team#quotes">Quotes</a></li>
+            </ul>
+          </aside>
+
+        </div>
+        <div class="column is-2-desktop is-6-mobile">
+          <aside class="menu">
+            <p class="menu-label">
+              Media
+            </p>
+            <ul class="menu-list">
+              <li><a href="/videos">Videos</a></li>
+              <li><a href="/articles">Articles</a></li>
+              <li><a href="http://ng-tweet.herokuapp.com/dashboard">Tweet wall</a></li>
+            </ul>
+          </aside>
+
+        </div>
+        <div class="column is-2-desktop is-8-mobile">
           <p class="menu-label">
             Find us!
           </p>
           {% if site.author.github %}
-           &nbsp; 
-            <a class="icon is-medium" href="{{ site.author.github }}">
-              <i class="fab fa-github fa-2x"></i>
+            <a class="icon" href="{{ site.author.github }}">
+              <i class="fab fa-github"></i>
             </a>
           {% endif %}
           {% if site.author.facebook %}
-           &nbsp; 
-          <a class="icon is-medium" href="{{ site.author.facebook }}">
-            <i class="fab fa-facebook fa-2x"></i>
+          <a class="icon" href="{{ site.author.facebook }}">
+            <i class="fab fa-facebook"></i>
           </a>
           {% endif %}
           {% if site.author.twitter %}
-           &nbsp; 
-          <a class="icon is-medium" href="{{ site.author.twitter }}">
-            <i class="fab fa-twitter fa-2x"></i>
+          <a class="icon" href="{{ site.author.twitter }}">
+            <i class="fab fa-twitter"></i>
           </a>
           {% endif %}
           {% if site.author.instagram %}
-           &nbsp; 
-          <a class="icon is-medium" href="{{ site.author.instagram }}">
-            <i class="fab fa-instagram fa-2x"></i>
+          <a class="icon" href="{{ site.author.instagram }}">
+            <i class="fab fa-instagram"></i>
           </a>
           {% endif %}
           {% if site.author.medium %}
-           &nbsp; 
-          <a class="icon is-medium" href="{{ site.author.medium }}">
-            <i class="fab fa-medium fa-2x"></i>
+          <a class="icon" href="{{ site.author.medium }}">
+            <i class="fab fa-medium"></i>
           </a>
           {% endif %}
           {% if site.author.email %}
-           &nbsp; 
-          <a class="icon is-medium" href="mailto:{{ site.author.email }}">
-            <i class="fas fa-envelope-open fa-2x"></i>
-          </a>
-          {% endif %}
-          {% if site.author.tumblr %}
-          <a class="icon" href="https://{{ site.author.tumblr }}.tumblr.com">
-            <i class="fab fa-tumblr"></i>
+          <a class="icon" href="mailto:{{ site.author.email }}">
+            <i class="fas fa-envelope-open"></i>
           </a>
           {% endif %}
 

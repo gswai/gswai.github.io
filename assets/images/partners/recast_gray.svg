@@ -14,7 +14,7 @@
    width="256"
    height="256"
    viewBox="0 0 255.99999 256"
-   sodipodi:docname="recast.svg"
+   sodipodi:docname="recast_gray.svg"
    inkscape:version="0.92.2 2405546, 2018-03-11">
   <metadata
      id="metadata8">
@@ -24,12 +24,21 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs6" />
+     id="defs6">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter816">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix814" />
+    </filter>
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -52,7 +61,8 @@
      inkscape:current-layer="svg2" />
   <g
      id="g12"
-     transform="matrix(0.57094506,0,0,0.57094506,-122.56425,79.739869)">
+     transform="matrix(0.57094506,0,0,0.57094506,-122.56425,79.739869)"
+     style="filter:url(#filter816)">
     <path
        style="fill:#fde8b7;stroke-width:0.37301773"
        d="m 417.89494,23.279797 c -21.70619,-1.17376 -40.49204,-5.0029 -42.95025,-8.7546 -0.74191,-1.1323 -0.47808,-5.8472801 0.63894,-11.4184601 2.92871,-14.6070799 13.03657,-29.0098809 26.45806,-37.7003809 9.18257,-5.945776 18.52425,-8.959196 29.84142,-9.626182 11.72855,-0.691232 21.20501,1.244145 31.36888,6.406468 5.96791,3.031153 10.58619,6.431702 15.63136,11.509727 10.58916,10.658138 16.39913,22.9186579 17.37613,36.668098 0.23199,3.26481 0.18566,3.72484 -0.44547,4.42327 -3.53856,3.91587 -21.33319,7.38106 -43.78794,8.52694 -8.35585,0.4264 -25.93292,0.40844 -34.13113,-0.0349 z"
