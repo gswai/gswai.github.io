@@ -12,8 +12,8 @@
    version="1.1"
    id="svg2"
    width="256"
-   height="256"
-   viewBox="0 0 255.99999 256"
+   height="128"
+   viewBox="0 0 255.99999 128"
    sodipodi:docname="recast_gray.svg"
    inkscape:version="0.92.2 2405546, 2018-03-11">
   <metadata
@@ -31,7 +31,7 @@
   <defs
      id="defs6">
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Greyscale"
        id="filter816">
       <feColorMatrix
@@ -53,7 +53,7 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="2.19139"
-     inkscape:cx="111.46143"
+     inkscape:cx="221.89362"
      inkscape:cy="106.25274"
      inkscape:window-x="0"
      inkscape:window-y="35"
@@ -61,7 +61,7 @@
      inkscape:current-layer="svg2" />
   <g
      id="g12"
-     transform="matrix(0.57094506,0,0,0.57094506,-122.56425,79.739869)"
+     transform="matrix(0.50415222,0,0,0.50415222,-93.293259,32.07858)"
      style="filter:url(#filter816)">
     <path
        style="fill:#fde8b7;stroke-width:0.37301773"
