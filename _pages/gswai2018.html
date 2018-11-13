@@ -1,0 +1,61 @@
+---
+layout: default
+title: GSWAI 2018
+description: "At the end of november, during two weekends, one hundred web developers, graphic designers, business experts, engineers, researchers and students worked intensively on functional startup AI prototypes."
+image: /assets/images/logo_small.png
+permalink: /gswai2018
+
+---
+
+<section class="hero is-primary is-small" id="about">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title has-text-centered">
+        {{ page.title }}
+      </h1>
+      <p>
+        On the weekends of 23 and 30 of november the Global Startup Weekend AI will go life in 15 cities. 
+
+        The weekend event is centered on action, innovation, and education.  
+        Beginning on Friday night with an idea pitching session and 
+        continuing throughout the weekend with testing, business 
+        model development, and basic prototype creation, Startup 
+        Weekend culminates on Sunday night with demo pitching in 
+        front of a panel of potential investors and local 
+        entrepreneurs.  Participants are challenged with building 
+        functional startups during the event and are able to 
+        collaborate with like-minded individuals.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small" id="mentors">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title has-text-centered">
+        Mentors
+      </h2>
+
+      {% for quote in site.data.mentors %}
+      <article class="media">
+        <figure class="media-left">
+          <p class="image is-64x64">
+            <amp-img width="64" height="64" layout="intrinsic" src="{{ quote.img }}" alt="{{ quote.author }}"></amp-img>
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>{{ quote.author }}</strong> <small>{{ quote.title }}</small>
+              <br>
+              {{ quote.text }}
+            </p>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
