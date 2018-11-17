@@ -27,23 +27,28 @@ sitemap: false
       },
       highlightBorderWidth: 3
     },
+    done: function(datamap) {
+      datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+        const country = geography.properties.name;
+        link = Object.values(datamap.options.data).filter(item => item.country == country)[0]['url'];
+        location.href = link;
+      });
+    },
     data: {
-      CAN: { fillKey: "authorHasTraveledTo", city: "Montreal" },
-      COL: { fillKey: "authorHasTraveledTo", city: "Bucaramanga" },
-      ECU: { fillKey: "authorHasTraveledTo", city: "Guayaquil" },
-      BOL: { fillKey: "authorHasTraveledTo", city: "La Paz" },
-      PER: { fillKey: "authorHasTraveledTo", city: "Lima" },
-      POL: { fillKey: "authorHasTraveledTo", city: "Szczecin" },
-      BEL: { fillKey: "authorHasTraveledTo", city: "Bruxelles" },
-      FRA: { fillKey: "authorHasTraveledTo", city: "Paris" },
-      TUR: { fillKey: "authorHasTraveledTo", city: "Istanbul" },
-      CMR: { fillKey: "authorHasTraveledTo", city: "Yaoundé" },
-      MDG: { fillKey: "authorHasTraveledTo", city: "Antananarivo" },
-      SAU: { fillKey: "authorHasTraveledTo", city: "Jeddah" },
-      ARE: { fillKey: "authorHasTraveledTo", city: "Dubai" },
-      CHN: { fillKey: "authorHasTraveledTo", city: "Hong Kong" },
-      TWN: { fillKey: "authorHasTraveledTo", city: "Taipei" },
-      AUS: { fillKey: "authorHasTraveledTo", city: "Sydney" },
+      CAN: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/1972294826401312/", country: "Canada", city: "Montreal" },
+      LBN: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/312102822719973/", country: "Lebanon", city: "Beiruth" },
+      ECU: { fillKey: "authorHasTraveledTo", url: "", country: "Ecuador", city: "Guayaquil" },
+      BOL: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/365815747292136/", country: "Bolivia", city: "La Paz" },
+      PER: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/318107515636759/", country: "Peru", city: "Lima" },
+      POL: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/575562162881262/", country: "Poland", city: "Szczecin" },
+      BEL: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/247775735878600/", country: "Belgium", city: "Bruxelles" },
+      FRA: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/294607047798985/", country: "France", city: "Paris" },
+      TUR: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/317643755722197/", country: "Turkey", city: "Izmir" },
+      CMR: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/540899696356588/", country: "Cameroon", city: "Yaoundé" },
+      MDG: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/318439688912860/", country: "Madagascar", city: "Antananarivo" },
+      SAU: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/504384103305093/", country: "Saudi Arabia", city: "Jeddah" },
+      CHN: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/248171535822511/", country: "China", city: "Hong Kong" },
+      TWN: { fillKey: "authorHasTraveledTo", url: "https://www.facebook.com/events/322874345194850/", country: "Taiwan", city: "Taipei" }
     }
   });
 // Pure JavaScript
