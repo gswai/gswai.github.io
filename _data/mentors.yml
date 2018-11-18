@@ -2,3 +2,46 @@
   author: William Wolf 
   title: Machine Learning Engineer @ ASAPP 
   img: /assets/images/mentors/will.jpg
+  linkedin: https://www.linkedin.com/in/williamabrwolf/
+
+- text: "Mission driven entrepreneur who builds companies, nurtures communities, and invests in people. He leads the AI LA community, Los Angeles’ largest and most active community of today's most curious minds focused on tomorrow’s most challenging problems."
+  author: Tood Terrazas
+  title: Social Entrepreneur, Collaboration Catalyst, AI LA President 
+  img: /assets/images/mentors/tood.jpg
+  linkedin: https://www.linkedin.com/in/toddterrazas/
+
+- text: "Data scientist, Aerospace Engineer by training and a hobbyist computer programmer. passionate about how human intelligence and machine intelligence are changing the world using computing,   After many years working on management consulting (and more than a little struggle pushing for rigorous, fact based, data rich approaches to problem solving, rather than relying on \"softer\" consulting skills), and some working more specifically in machine learning and analytics. He has worked in different industries, mostly technology and media related, with focus on customer-facing functions (Sales, Marketing, Customer Support)."
+  author: Jose Luis Hidalgo
+  title: Data scientist, former management consultant
+  img: /assets/images/mentors/jose.jpg
+  linkedin: https://www.linkedin.com/in/jlhidalgo/
+
+- text: "Founder of WAYV Digital, providing business strategy and technology solutions for impact-driven companies to help them scale up, become sustainable and spread their impact around the world. Currently working with companies across 5 continents in the areas of education, disability care, healthcare and sustainable e-commerce."
+  author: Budhaditya Bhattacharya
+  title: "Digital Nomad | Business Strategist | Solution Architect | Ambassador at City AI"
+  img: /assets/images/mentors/budha.jpg
+  linkedin: https://www.linkedin.com/in/budha-b/
+
+- text: "CEO @ Yobs: On a mission to build AI that makes talent decisions bias-free and efficient.  Seed investor / hands-on advisor for ridiculously ambitious founders in the US who are foreign-born or underrepresented.  Growing the top applied AI community in LA."
+  author: Raphael Danilo
+  title: Co-Founder & CEO @ Yobs
+  img: /assets/images/mentors/raphael.jpg
+  linkedin : https://www.linkedin.com/in/raphael-danilo-481b41b2/
+
+- author: Kshitiz Rimal
+  text: "AI/Machine Learning Developer and Researcher. Full Stack Developer and UI/UX Designer with over 7 years of professional experience."
+  linkedin : https://www.linkedin.com/in/kshitiz-rimal/
+  title: Head of Research at AID, Google Developers Expert (GDE) on ML, Intel AI Student Ambassador, City.AI Ambassador
+  img: /assets/images/mentors/kshitiz.jpg
+
+- text: "She is a strategy-focused Head of Marketing helping AI and product-first companies grow. Her approach is data driven, yet focused on human behaviours, needs and expectations. She also values the role of empathy, design thinking and consumer psychology in making sensible marketing and business decisions."
+  author: Catalina Butnaru 
+  linkedin: https://www.linkedin.com/in/catalinabutnaru/
+  title: Product Marketing | Global Ethics Lead at City AI | Women in AI Ambassador | Agile Ethics Trainer 
+  img: /assets/images/mentors/catalina.jpg
+
+- text: "Harri Ketamo, Ph.D., is an independent researcher and start-up entrepreneur with over 15 years of experience in Learning Sciences, Data Mining and Artificial Intelligence. He is a Senior Fellow at University of Turku and Adjunct Professor at Tampere University of Technology. Prior to founding HeadAI (artificial labour), he has founded e.g. SkillPixels ltd. (games based learning) and gameMiner ltd (game AI & data mining). Ketamo has published more than 80 international peer-reviewed research articles, had ~200 presentations on his studies in international forums and received several awards and nominations related his R&D activities."
+  author: Harri Ketamo
+  linkedin: https://www.linkedin.com/in/harriketamo/
+  title: "Founder & Chairman | Adjunct Professor | Eisenhower Fellow 2017"
+  img: /assets/images/mentors/harri.jpg
