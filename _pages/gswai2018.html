@@ -323,24 +323,41 @@ permalink: /gswai2018
       <h2 class="title has-text-centered">
         Mentors
       </h2>
+      <div class="columns is-multiline">
       {% for quote in site.data.mentors %}
-      <article class="media">
-        <figure class="media-left">
-          <p class="image is-64x64">
-            <amp-img width="64" height="64" layout="intrinsic" src="{{ quote.img }}" alt="{{ quote.author }}"></amp-img>
-          </p>
-        </figure>
-        <div class="media-content">
-          <div class="content">
-            <a href="{{ quote.linkedin }}"><strong>{{ quote.author }}</strong></a>
-            <small>{{ quote.title }}</small>
-            <p>
-              {{ quote.text }}
-            </p>
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <a href="{{ quote.linkedin }}" target="_blank">
+                    <amp-img width="64" height="64" layout="intrinsic" src="{{ quote.img }}" alt="{{ quote.author }}"></amp-img>
+                  </a>
+                </figure>
+              </div>
+              <div class="media-content">
+                <a href="{{ quote.linkedin }}" class="title is-4">{{ quote.author }}</a>
+                <p class="subtitle is-6">{{ quote.title | newline_to_br }}</p>
+              </div>
+            </div>
+
+            <div id="readmore-button{{ forloop.index }}">
+              <center>
+                <button on="tap:readmore-button{{ forloop.index }}.hide, readmore-text{{ forloop.index }}.toggleVisibility" 
+                  class="button is-warning">Description </button>
+              </center>
+            </div>
+            <div class="content" id="readmore-text{{ forloop.index }}"  hidden="">
+              <p>
+                {{ quote.text }}
+              </p>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
       {% endfor %}
+      </div>
 
     </div>
   </div>

@@ -10,40 +10,40 @@
   img: /assets/images/mentors/tood.jpg
   linkedin: https://www.linkedin.com/in/toddterrazas/
 
-- text: "Data scientist, Aerospace Engineer by training and a hobbyist computer programmer. passionate about how human intelligence and machine intelligence are changing the world using computing,   After many years working on management consulting (and more than a little struggle pushing for rigorous, fact based, data rich approaches to problem solving, rather than relying on \"softer\" consulting skills), and some working more specifically in machine learning and analytics. He has worked in different industries, mostly technology and media related, with focus on customer-facing functions (Sales, Marketing, Customer Support)."
+- text: "Data scientist, Aerospace Engineer by training and a hobbyist computer programmer. Passionate about how human intelligence and machine intelligence are changing the world using computing. After many years working on management consulting (and more than a little struggle pushing for rigorous, fact based, data rich approaches to problem solving, rather than relying on \"softer\" consulting skills), and some working more specifically in machine learning and analytics. He has worked in different industries, mostly technology and media related, with focus on customer-facing functions (Sales, Marketing, Customer Support)."
   author: Jose Luis Hidalgo
   title: Data scientist, former management consultant
   img: /assets/images/mentors/jose.jpg
   linkedin: https://www.linkedin.com/in/jlhidalgo/
 
-- text: "Founder of WAYV Digital, providing business strategy and technology solutions for impact-driven companies to help them scale up, become sustainable and spread their impact around the world. Currently working with companies across 5 continents in the areas of education, disability care, healthcare and sustainable e-commerce."
-  author: Budhaditya Bhattacharya
-  title: "Digital Nomad | Business Strategist | Solution Architect | Ambassador at City AI"
-  img: /assets/images/mentors/budha.jpg
-  linkedin: https://www.linkedin.com/in/budha-b/
+- text: "Justine Marchand is one of the Techstars startup accelerator mentors as well as Program Manager, Montreal at Techstars."
+  author: Justine Marchand
+  linkedin: https://www.linkedin.com/in/justinemarchand/
+  title: "Project manager at Techstars"
+  img: /assets/images/mentors/justine.jpg
 
-- text: "CEO @ Yobs: On a mission to build AI that makes talent decisions bias-free and efficient.  Seed investor / hands-on advisor for ridiculously ambitious founders in the US who are foreign-born or underrepresented.  Growing the top applied AI community in LA."
+- text: He is interested in data mining of functional brain images (fMRI) to learn models of brain function, encoding and decoding models of cognition, resting-state and functional connectivity, functional parcellations of the brain, spatial penalties for learning and denoising.
+  author: Gael Varoquaux
+  linkedin: https://www.linkedin.com/in/gael-varoquaux-a8391411/
+  title: AI researcher at INRIA.
+  img: /assets/images/mentors/gael.jpg
+
+- text: "On a mission to build AI that makes talent decisions bias-free and efficient.  Seed investor / hands-on advisor for ridiculously ambitious founders in the US who are foreign-born or underrepresented.  Growing the top applied AI community in LA."
   author: Raphael Danilo
   title: Co-Founder & CEO @ Yobs
   img: /assets/images/mentors/raphael.jpg
   linkedin : https://www.linkedin.com/in/raphael-danilo-481b41b2/
 
-- author: Kshitiz Rimal
-  text: "AI/Machine Learning Developer and Researcher. Full Stack Developer and UI/UX Designer with over 7 years of professional experience."
-  linkedin : https://www.linkedin.com/in/kshitiz-rimal/
-  title: Head of Research at AID, Google Developers Expert (GDE) on ML, Intel AI Student Ambassador, City.AI Ambassador
-  img: /assets/images/mentors/kshitiz.jpg
+- text: "Founder of WAYV Digital, providing business strategy and technology solutions for impact-driven companies to help them scale up, become sustainable and spread their impact around the world. Currently working with companies across 5 continents in the areas of education, disability care, healthcare and sustainable e-commerce."
+  author: Budhaditya Bhattacharya
+  title: "Digital Nomad | Business Strategist | Ambassador at City AI"
+  img: /assets/images/mentors/budha.jpg
+  linkedin: https://www.linkedin.com/in/budha-b/
 
-- text: "She is a strategy-focused Head of Marketing helping AI and product-first companies grow. Her approach is data driven, yet focused on human behaviours, needs and expectations. She also values the role of empathy, design thinking and consumer psychology in making sensible marketing and business decisions."
-  author: Catalina Butnaru 
-  linkedin: https://www.linkedin.com/in/catalinabutnaru/
-  title: Product Marketing | Global Ethics Lead at City AI | Women in AI Ambassador | Agile Ethics Trainer 
-  img: /assets/images/mentors/catalina.jpg
-
-- text: "Harri Ketamo, Ph.D., is an independent researcher and start-up entrepreneur with over 15 years of experience in Learning Sciences, Data Mining and Artificial Intelligence. He is a Senior Fellow at University of Turku and Adjunct Professor at Tampere University of Technology. Prior to founding HeadAI (artificial labour), he has founded e.g. SkillPixels ltd. (games based learning) and gameMiner ltd (game AI & data mining). Ketamo has published more than 80 international peer-reviewed research articles, had ~200 presentations on his studies in international forums and received several awards and nominations related his R&D activities."
+- text: "He is an independent researcher and start-up entrepreneur with over 15 years of experience in Learning Sciences, Data Mining and Artificial Intelligence. He is a Senior Fellow at University of Turku and Adjunct Professor at Tampere University of Technology. Prior to founding HeadAI (artificial labour), he has founded e.g. SkillPixels ltd. (games based learning) and gameMiner ltd (game AI & data mining). Ketamo has published more than 80 international peer-reviewed research articles, had ~200 presentations on his studies in international forums and received several awards and nominations related his R&D activities."
   author: Harri Ketamo
   linkedin: https://www.linkedin.com/in/harriketamo/
-  title: "Founder & Chairman | Adjunct Professor | Eisenhower Fellow 2017"
+  title: "Founder & Chairman | Adjunct Professor | Eisenhower Fellow 2017 \n \n"
   img: /assets/images/mentors/harri.jpg
 
 - text: "My background is engineering but I love bringing tech products to market and selling them as much as I love building them. I'm strongly attached to Montreal and believe in its capacity to generate leading tech companies. Putting this into concrete actions as Managing Director of Techstars Montreal AI and mentor at Founder Institute."
@@ -52,8 +52,37 @@
   title: "Managing Director of Techstars Montreal AI, I invest in founders to help them do more faster."
   img: /assets/images/mentors/bruno.jpg
 
-- text: "Justine Marchand is one of the Techstars startup accelerator mentors as well as Program Manager, Montreal at Techstars."
-  author: Justine Marchand
-  linkedin: https://www.linkedin.com/in/justinemarchand/
-  title: " Gestionnaire de programme chez Techstars"
-  img: /assets/images/mentors/justine.jpg
+- text: "She is a strategy-focused Head of Marketing helping AI and product-first companies grow. Her approach is data driven, yet focused on human behaviours, needs and expectations. She also values the role of empathy, design thinking and consumer psychology in making sensible marketing and business decisions."
+  author: Catalina Butnaru 
+  linkedin: https://www.linkedin.com/in/catalinabutnaru/
+  title: "Product Marketing | Global Ethics Lead at City AI | Women in AI Ambassador | Agile Ethics Trainer \n \n"
+  img: /assets/images/mentors/catalina.jpg
+
+- text: "He is in charge of project's delivery and in charge of leading the operations team (data scientists and project business leaders), prioritization and coordiation for IT team. He works in different type of projects : predictive management of temporary contracts, detection of underwritting fraud motor business using machine learning and features engineering, detection of claims fraud for P&C and health, text mining & prédiction of customer satisfaction using machine learning"
+  author: Rene Harig
+  linkedin: https://www.linkedin.com/in/harig-ren%C3%A9-758253105/?locale=en_US
+  title: "Head of Data Science delivery - Big Data & Artificial Intelligence at Allianz France. \n \n" 
+
+- author: Kshitiz Rimal
+  text: "AI/Machine Learning Developer and Researcher. Full Stack Developer and UI/UX Designer with over 7 years of professional experience."
+  linkedin : https://www.linkedin.com/in/kshitiz-rimal/
+  title: Head of Research at AID, Google Developers Expert (GDE) on ML, Intel AI Student Ambassador, City.AI Ambassador
+  img: /assets/images/mentors/kshitiz.jpg
+
+- text: "Foremost a technology aficionado, interested in understanding digital major trends and their impact on businesses. I am inquisitive on next technological waves and their impact on our society more generally. I have been involved in the Telco, Advertising and Media businesses over the past 10 years covering assignments on business growth and transformation. He is currently Deputy of Group Strategy & M&A"
+  author: Gunesh Dwarika 
+  linkedin: https://www.linkedin.com/in/gdwarika/
+  title: "Deputy of Group Strategy and M&A at GEFCO" 
+  img: /assets/images/mentors/gunesh.jpg
+
+- text: "Mr. Pickering is an innovative expert in analytics and data management. His extensive global experience includes leadership roles on many high profile projects and leading edge technology initiatives. He is currently leveraging his extensive Cloud and Agile development background to bring enterprise-class predictive and protective analytics to consumers."
+  author: R. Michael Pickering 
+  linkedin: https://www.linkedin.com/in/rmpickering-cloudconstable/
+  title: President and CEO, CloudConstable Incorporated
+  img: /assets/images/mentors/michael.jpg
+
+- text: She first worked for 3 years as a research engineer at the French Atomic Energy Commission (CEA) where she contributed to several projects in Machine Learning, NLP (Natural Language Processing) and building chatbots. Passionate about new technologies, she is member of the associations Women in AI and All In and regularly participates in tech meetups.
+  author: Samah Ghalloussi
+  linkedin: https://www.linkedin.com/in/samahghalloussi/
+  title: Data Scientist at the French Ministry of Health.
+  img: /assets/images/mentors/samah.jpg
