@@ -36,12 +36,14 @@ permalink: /gswai2018
       </h2>
       <amp-accordion animate expand-single-section>
         <section>
-          <article class="message is-warning">
-            <div class="message-header">
-              <p>Global AI Summit in Paris, 2019</p>
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </div>
-          </article>
+          <header>
+            <article class="message is-warning">
+              <div class="message-header">
+                <p>Global AI Summit in Paris, 2019</p>
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </div>
+            </article>
+          </header>
           <article class="message">
             <div class="message-body content">
               <p>
@@ -73,12 +75,14 @@ permalink: /gswai2018
           </article>
         </section>
         <section>
+          <header>
           <article class="message is-warning">
             <div class="message-header">
               <p>Next AI pre-qualification to accelerator & founder program </p>
               <i class="fas fa-angle-down" aria-hidden="true"></i>
             </div>
           </article>
+          </header>
           <article class="message">
             <div class="message-body content">
               <p>
@@ -93,12 +97,14 @@ permalink: /gswai2018
           </article>
         </section>
         <section>
+          <header>
           <article class="message is-warning">
             <div class="message-header">
               <p>Snips kit for Makers & Iot projects</p>
               <i class="fas fa-angle-down" aria-hidden="true"></i>
             </div>
           </article>
+          </header>
           <article class="message">
             <div class="message-body content">
               <p>
@@ -110,12 +116,14 @@ permalink: /gswai2018
           </article>
         </section>
         <section>
+          <header>
           <article class="message is-warning">
             <div class="message-header">
               <p>Techstars AI Montreal mentorship</p>
               <i class="fas fa-angle-down" aria-hidden="true"></i>
             </div>
           </article>
+          </header>
           <article class="message">
             <div class="message-body content">
               <p>
@@ -125,12 +133,14 @@ permalink: /gswai2018
           </article>
         </section>
         <section>
+          <header>
           <article class="message is-warning">
             <div class="message-header">
               <p>Google cloud computing </p>
               <i class="fas fa-angle-down" aria-hidden="true"></i>
             </div>
           </article>
+          </header>
           <article class="message">
             <div class="message-body content">
               <ul>
@@ -329,6 +339,7 @@ permalink: /gswai2018
         <div class="card">
           <div class="card-content">
             <div class="media">
+              {% if quote.img %}
               <div class="media-left">
                 <figure class="image is-48x48">
                   <a href="{{ quote.linkedin }}" target="_blank">
@@ -336,6 +347,7 @@ permalink: /gswai2018
                   </a>
                 </figure>
               </div>
+              {% endif %}
               <div class="media-content">
                 <a href="{{ quote.linkedin }}" class="title is-4">{{ quote.author }}</a>
                 <p class="subtitle is-6">{{ quote.title | newline_to_br }}</p>
