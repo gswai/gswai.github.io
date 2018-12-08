@@ -1,0 +1,49 @@
+---
+layout: default
+title: Tweet Wall
+description: "A place where we collect all GSWAI tweets"
+image: /assets/images/logo_small.png
+twitter: true
+permalink: /tweet_wall
+
+---
+
+<section class="hero is-primary is-small" id="about">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title has-text-centered">
+        {{ page.title }}
+      </h1>
+      <p>
+        On the weekends of 23 and 30 of november the Global Startup Weekend AI will go life in 15 cities. 
+
+        The weekend event is centered on action, innovation, and education.  
+        Beginning on Friday night with an idea pitching session and 
+        continuing throughout the weekend with testing, business 
+        model development, and basic prototype creation, Startup 
+        Weekend culminates on Sunday night with demo pitching in 
+        front of a panel of potential investors and local 
+        entrepreneurs.  Participants are challenged with building 
+        functional startups during the event and are able to 
+        collaborate with like-minded individuals.
+      </p>
+      <br>
+
+      <ul>
+        <amp-list width=auto
+          height=100
+          layout=fixed-height
+          items="data"
+          src="https://ng-tweet.herokuapp.com/api/tweets/0">
+          <template type="amp-mustache" id="amp-template-id">
+            <li>
+              <a href="{% raw %}{{author}}{% endraw %}">{% raw %}{{author}}{% endraw %}</a>
+              <a href="{% raw %}{{author}}{% endraw %}">{% raw %}{{body}}{% endraw %}</a>
+            </li>
+          </template>
+        </amp-list>
+      </ul>
+
+    </div>
+  </div>
+</section>
